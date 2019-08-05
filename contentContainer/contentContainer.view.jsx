@@ -11,11 +11,12 @@ const ContentContainer = ({ children, classNameObj }) => (
 
 ContentContainer.propTypes = {
 	children: PropTypes.node,
-	classNameObj: PropTypes.object.isRequired
+	classNameObj: PropTypes.object
 };
 
 ContentContainer.defaultProps = {
-	children: null
+	children: null,
+	classNameObj: undefined
 };
 
 export default ContentContainer;
