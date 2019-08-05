@@ -1,0 +1,31 @@
+{
+  "name": "@emana/components",
+  "version": "1.0.0",
+  "description": "Componentes básicos para projetos Emana",
+  "repository": "https://gitlab.emana.digital/dev/components.git",
+  "author": "Alfredo Peres <alfredo@emana.digital>",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "contentContainer",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@emana/style-utils": "^1.2.1",
+    "obj-str": "^1.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@emana/eslint-config-website-boilerplate": "^1.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "prettier": "^1.18.2"
+  }
+}

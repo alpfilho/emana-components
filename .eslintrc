@@ -1,0 +1,5 @@
+{
+	"extends": [
+		"@emana/eslint-config-website-boilerplate"
+	]
+}

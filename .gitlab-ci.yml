@@ -1,0 +1,19 @@
+image: node:latest
+before_script:
+  - yarn install
+stages:
+  - publish
+
+publish:
+  stage: publish
+  tags:
+    - deploy
+  environment:
+    name: npm
+    url: https://www.npmjs.com/package/@emana/components
+  only:
+    - tags
+    - triggers
+  script:
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+    - yarn publish --non-interactive --access public
