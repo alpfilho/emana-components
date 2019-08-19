@@ -1,31 +1,34 @@
 {
   "name": "@emana/components",
-  "version": "1.0.1",
-  "description": "Componentes básicos para projetos Emana",
+  "version": "2.0.0",
+  "description": "Componentes para projetos Emana",
   "repository": "https://gitlab.emana.digital/dev/components.git",
   "author": "Alfredo Peres <alfredo@emana.digital>",
   "license": "MIT",
+  "main": "dist/index.js",
   "private": false,
-  "files": [
-    "contentContainer",
-    "README.md",
-    "LICENSE"
-  ],
+  "scripts": {},
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.8.5",
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
   "peerDependencies": {
     "@emana/style-utils": "^1.2.1",
-    "obj-str": "^1.0.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "clsx": "^1.0.4",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
-  "devDependencies": {
-    "@emana/eslint-config-website-boilerplate": "^1.2.0",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "prettier": "^1.18.2"
+  "dependencies": {
+    "clsx": "^1.0.4",
+    "react": "^16.9.0"
   }
 }
