@@ -1,8 +1,24 @@
-image: node:latest
-before_script:
-  - npm install
 stages:
+  - build
   - publish
+
+build:
+  image: node:latest
+  before_script:
+    - npm install
+  stage: build
+  tags:
+    - build
+  script:
+    - npm run build
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 day
+    when: on_success
 
 publish:
   stage: publish
@@ -14,6 +30,8 @@ publish:
   only:
     - tags
     - triggers
+  dependencies:
+    - build
   script:
     - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
-    - npm publish --non-interactive --access public
+    - npm publish --access public
