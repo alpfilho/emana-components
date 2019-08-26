@@ -1,11 +1,11 @@
 import * as React from 'react';
-import './contentContainer.style.scss';
-import clsx from 'clsx';
 
-export const ContentContainer: React.FunctionComponent = (props) => {
+import { Container, Content } from './contentContainer.style';
+
+export const ContentContainer: React.FunctionComponent<{}> = ({ children }) => {
 	return (
-		<div className={clsx(['content-container'])}>
-			<div className="content">{props.children}</div>
-		</div>
+		<Container>
+			<Content>{children}</Content>
+		</Container>
 	);
 };
