@@ -12,8 +12,8 @@
 		"LICENSE",
 		"dist"
 	],
-  "types": "dist/index.d.ts",
-  "private": false,
+	"types": "dist/index.d.ts",
+	"private": false,
 	"scripts": {
 		"build": "rollup --config",
 		"watch": "rollup --config --watch"

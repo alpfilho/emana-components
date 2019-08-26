@@ -2,9 +2,15 @@ import * as React from 'react';
 
 import { Container, Content } from './contentContainer.style';
 
-export const ContentContainer: React.FunctionComponent<{}> = ({ children }) => {
+export interface ContentContainerProps {
+	readonly className?: string;
+}
+
+export const ContentContainer: React.FunctionComponent<
+	ContentContainerProps
+> = ({ children, className }) => {
 	return (
-		<Container>
+		<Container className={className}>
 			<Content>{children}</Content>
 		</Container>
 	);
