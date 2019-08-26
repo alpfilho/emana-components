@@ -12,7 +12,8 @@
 		"LICENSE",
 		"dist"
 	],
-	"private": false,
+  "types": "dist/index.d.ts",
+  "private": false,
 	"scripts": {
 		"build": "rollup --config",
 		"watch": "rollup --config --watch"
@@ -30,21 +31,20 @@
 		"babel-plugin-styled-components": "^1.10.6",
 		"prettier": "^1.18.2",
 		"rollup": "^1.20.1",
+		"rollup-plugin-alias": "^2.0.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.2",
+		"rollup-plugin-delete": "^1.1.0",
 		"rollup-plugin-node-resolve": "^5.2.0",
+		"rollup-plugin-typescript2": "^0.23.0",
 		"typescript": "^3.5.3"
 	},
 	"peerDependencies": {
-		"@themgoncalves/super-query": "^3.0.0",
-		"clsx": "^1.0.4",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"styled-components": "^4.3.2"
 	},
 	"dependencies": {
-		"@themgoncalves/super-query": "^3.0.0",
-		"clsx": "^1.0.4",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"styled-components": "^4.3.2"
