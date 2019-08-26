@@ -4,11 +4,11 @@ stages:
 
 build:
   image: node:latest
-  before_script:
-    - npm install
   stage: build
   tags:
     - build
+  before_script:
+    - npm install
   script:
     - npm run build
   cache:
@@ -21,6 +21,7 @@ build:
     when: on_success
 
 publish:
+  image: node:latest
   stage: publish
   tags:
     - deploy
