@@ -10,8 +10,8 @@ export const ContentContainer: React.FunctionComponent<
 	ContentContainerProps
 > = ({ children, className }) => {
 	return (
-		<Container className={className}>
-			<Content>{children}</Content>
+		<Container>
+			<Content className={className}>{children}</Content>
 		</Container>
 	);
 };

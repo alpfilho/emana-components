@@ -13,8 +13,9 @@ export class Viewport {
 	right: number;
 	height: number;
 	width: number;
-	device: string;
-	listeners: Array<Function>;
+	device: 'mobile' | 'tablet' | 'desktop';
+	private listeners: Array<Function>;
+	private isRunningListeners: boolean;
 
 	constructor() {
 		this.listeners = [];
@@ -36,10 +37,25 @@ export class Viewport {
 		const listenerId = this.listeners.length;
 		this.listeners.push(listener);
 		return {
-			removeListener: () => {
+			remove: () => {
 				this.listeners = this.listeners.splice(listenerId, 1);
 			}
 		};
+	}
+
+	private requestListenersUpdate() {
+		if (!this.isRunningListeners) {
+			requestAnimationFrame(this.updateListeners.bind(this));
+			this.isRunningListeners = true;
+		}
+	}
+
+	private updateListeners() {
+		for (let index = 0; index < this.listeners.length; index++) {
+			this.listeners[index](this.get());
+		}
+
+		this.isRunningListeners = false;
 	}
 
 	public updatePosition() {
@@ -52,6 +68,7 @@ export class Viewport {
 		this.left = x;
 		this.right = x + (this.width || 0);
 
+		this.requestListenersUpdate();
 		return this.get();
 	}
 
@@ -59,6 +76,8 @@ export class Viewport {
 		this.height = getViewportHeight();
 		this.width = getViewportWidth();
 		this.device = getDeviceType(this.width);
+
+		this.requestListenersUpdate();
 		return this.get();
 	}
 }

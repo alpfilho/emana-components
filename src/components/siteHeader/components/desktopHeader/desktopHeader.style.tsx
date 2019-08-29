@@ -1,13 +1,39 @@
 import styled from 'styled-components';
+import posed from 'react-pose';
 
 import { ContentContainer } from 'components/contentContainer/contentContainer.view';
 
-export const Container = styled.header`
-	background: pink;
+const Header = posed.header({
+	default: {
+		/* Esse transform está vindo da prop (veja a documentação) */
+	},
+	fixed: {}
+});
+
+export const Container = styled(Header)`
+	position: ${({ fixed }) => {
+		if (fixed) {
+			return 'fixed';
+		}
+		return 'relative';
+	}};
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 4;
+	height: auto;
+	will-change: transform;
 `;
 
 export const Content = styled(ContentContainer)`
 	background: red;
+`;
+
+export const LogoContainer = styled.div`
+	width: 300px;
+	height: auto;
+	position: relative;
 `;
 
 export const Background = styled.div`

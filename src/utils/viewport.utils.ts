@@ -25,7 +25,9 @@ export const screenSizes = {
 	fullhd: 1920
 };
 
-export const getDeviceType = (viewportWidth: number): string => {
+export const getDeviceType = (
+	viewportWidth: number
+): 'mobile' | 'tablet' | 'desktop' => {
 	if (viewportWidth < screenSizes.tablet) {
 		return 'mobile';
 	} else if (viewportWidth < screenSizes.sm) {
