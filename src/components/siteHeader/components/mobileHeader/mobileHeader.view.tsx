@@ -1,10 +1,10 @@
 import React from 'react';
-import { LogoProp } from 'components/siteHeader/siteHeader.view';
+import { HeaderProps } from 'components/siteHeader/siteHeader.view';
 
-export interface MobileHeaderI {
-	logo: LogoProp;
-}
-
-export const MobileHeader: React.FunctionComponent<MobileHeaderI> = () => {
-	return <div />;
+export const MobileHeader: React.FunctionComponent<HeaderProps> = () => {
+	return (
+		<div>
+			<h1>Mobile</h1>
+		</div>
+	);
 };

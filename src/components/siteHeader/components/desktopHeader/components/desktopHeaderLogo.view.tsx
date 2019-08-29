@@ -13,4 +13,6 @@ export const DesktopHeaderLogo: React.FunctionComponent<
 	useEffect(() => {
 		console.log(logo);
 	}, []);
+
+	return null;
 };

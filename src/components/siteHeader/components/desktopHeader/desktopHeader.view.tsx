@@ -5,21 +5,13 @@ import {
 	Content,
 	LogoContainer
 } from './desktopHeader.style';
-import { LogoProp } from 'components/siteHeader/siteHeader.view';
+import { HeaderProps } from 'components/siteHeader/siteHeader.view';
 import { useViewportListener } from 'hooks/scroll.hooks';
 
-/* Biblioteca que é utilizada pelo react-router-dom */
-import { LocationDescriptor } from 'history';
 import { HashLink as Link } from 'react-router-hash-link';
 import { DesktopHeaderLogo } from 'components/siteHeader/components/desktopHeader/components/desktopHeaderLogo.view';
 
-export interface DesktopHeaderProps {
-	readonly fixed?: boolean;
-	readonly logo: LogoProp;
-	readonly links: Array<LocationDescriptor>;
-}
-
-export const DesktopHeader: React.FunctionComponent<DesktopHeaderProps> = ({
+export const DesktopHeader: React.FunctionComponent<HeaderProps> = ({
 	fixed,
 	logo
 }) => {

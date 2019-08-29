@@ -3,6 +3,16 @@ import React, { useContext } from 'react';
 import { context } from 'contexts/viewport/viewport.context';
 import { DesktopHeader } from './components/desktopHeader/desktopHeader.view';
 import { MobileHeader } from './components/mobileHeader/mobileHeader.view';
+import { LocationDescriptor } from 'history';
+
+export interface LinkProp {
+	text: string;
+	link: LocationDescriptor;
+}
+
+export interface FixedProp {
+	trigger: number;
+}
 
 export interface LogoProp {
 	component: Array<React.ReactElement> | React.ReactElement;
@@ -16,28 +26,31 @@ interface ElementStylesI {
 	opacity?: number;
 }
 
-interface StatesI {
-	default?: ElementStylesI;
+interface StatesProp {
+	default: ElementStylesI;
 	fixed?: ElementStylesI;
 }
 
 export interface HeaderProps {
-	fixed?: boolean;
+	fixed?: FixedProp;
 	logo: LogoProp;
-	links: Array<Object>;
-	states?: StatesI;
+	links: Array<LinkProp>;
+	states?: StatesProp;
 }
 
 export const SiteHeader: React.FunctionComponent<HeaderProps> = ({
 	fixed,
 	links,
-	logo
+	logo,
+	states
 }) => {
 	const { device } = useContext(context);
 
 	if (device === 'tablet' || device === 'mobile') {
-		return <MobileHeader logo={logo} />;
+		return <MobileHeader fixed={fixed} logo={logo} links={links} />;
 	}
 
-	return <DesktopHeader fixed={fixed} links={links} logo={logo} />;
+	return (
+		<DesktopHeader fixed={fixed} links={links} logo={logo} states={states} />
+	);
 };
