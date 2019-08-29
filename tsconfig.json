@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
 		"outDir": "dist",
 		"module": "ESNext",
 		"target": "ESNext",
@@ -8,14 +7,13 @@
 		"allowJs": false,
 		"rootDir": "src",
 		"jsx": "react",
-		"moduleResolution": "classic",
+		"moduleResolution": "node",
 		"declaration": true,
 		"declarationMap": true,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
 		"diagnostics": true,
 		"esModuleInterop": true,
-		"composite": true,
 		"noImplicitAny": true,
 		"strictNullChecks": true,
 		"suppressImplicitAnyIndexErrors": true,
