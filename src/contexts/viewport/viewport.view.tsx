@@ -8,11 +8,8 @@ export const ViewportContextProvider: React.FunctionComponent<{}> = ({
 	const state = useRef<Viewport>(new Viewport());
 
 	useEffect(() => {
-		const onScroll = () => {
+		const onViewportChange = () => {
 			state.current.updatePosition();
-		};
-
-		const onResize = () => {
 			state.current.updateSize();
 		};
 
@@ -20,12 +17,12 @@ export const ViewportContextProvider: React.FunctionComponent<{}> = ({
 		 * O Listener é registrado no componente e não na classe porquê assim
 		 * conseguimos remover o listener de forma eficiente (quando o contextProvider é desmontado)
 		 */
-		window.addEventListener('scroll', onScroll);
-		window.addEventListener('resize', onResize);
+		window.addEventListener('scroll', onViewportChange);
+		window.addEventListener('resize', onViewportChange);
 
 		return () => {
-			window.removeEventListener('scroll', onScroll);
-			window.removeEventListener('resize', onResize);
+			window.removeEventListener('scroll', onViewportChange);
+			window.removeEventListener('resize', onViewportChange);
 		};
 	}, []);
 

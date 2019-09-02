@@ -6,6 +6,18 @@ import {
 
 import { getScrollX, getScrollY } from 'utils/scroll.utils';
 
+export type ViewportListenerType = (viewport: viewportI) => any;
+
+interface viewportI {
+	top: number;
+	bottom: number;
+	left: number;
+	right: number;
+	height: number;
+	width: number;
+	device: 'mobile' | 'tablet' | 'desktop';
+}
+
 export class Viewport {
 	top: number;
 	bottom: number;
@@ -14,7 +26,7 @@ export class Viewport {
 	height: number;
 	width: number;
 	device: 'mobile' | 'tablet' | 'desktop';
-	private listeners: Array<Function>;
+	private listeners: Array<ViewportListenerType>;
 	private isRunningListeners: boolean;
 
 	constructor() {
@@ -24,16 +36,20 @@ export class Viewport {
 	}
 
 	public get() {
-		return {
+		const viewport: viewportI = {
 			top: this.top,
 			bottom: this.bottom,
 			left: this.left,
 			right: this.right,
+			height: this.height,
+			width: this.width,
 			device: this.device
 		};
+
+		return viewport;
 	}
 
-	public addListener(listener: Function) {
+	public addListener(listener: ViewportListenerType) {
 		const listenerId = this.listeners.length;
 		this.listeners.push(listener);
 		return {
@@ -69,7 +85,6 @@ export class Viewport {
 		this.right = x + (this.width || 0);
 
 		this.requestListenersUpdate();
-		return this.get();
 	}
 
 	public updateSize() {
@@ -78,6 +93,5 @@ export class Viewport {
 		this.device = getDeviceType(this.width);
 
 		this.requestListenersUpdate();
-		return this.get();
 	}
 }

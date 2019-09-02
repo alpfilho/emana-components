@@ -10,5 +10,3 @@ export {
 export {
 	ContextProvider
 } from 'components/contextProvider/contextProvider.view';
-
-export { SiteHeader } from 'components/siteHeader/siteHeader.view';
