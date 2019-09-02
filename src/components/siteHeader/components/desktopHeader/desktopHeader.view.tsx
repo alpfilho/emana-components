@@ -1,36 +1,96 @@
-import * as React from 'react';
+import React, { useContext, useLayoutEffect, useRef, useState } from 'react';
+
 import {
 	Background,
 	Container,
 	Content,
-	LogoContainer
+	ContentContainer,
+	LogoContainer,
+	Nav
 } from './desktopHeader.style';
-import { HeaderProps } from 'components/siteHeader/siteHeader.view';
-import { useViewportListener } from 'hooks/scroll.hooks';
+
+import { HeaderProps, StatesT } from '../../types';
+import { getVariants, transformTemplate } from '../../helpers';
 
 import { HashLink as Link } from 'react-router-hash-link';
-import { DesktopHeaderLogo } from 'components/siteHeader/components/desktopHeader/components/desktopHeaderLogo.view';
+import { DesktopHeaderLogo } from './components/destopHeaderLogo/desktopHeaderLogo.view';
+import { MenuItem } from '../menuItem/menuItem.view';
+import { useViewportListener } from 'hooks/scroll.hooks';
+import { context } from 'contexts/viewport/viewport.context';
 
 export const DesktopHeader: React.FunctionComponent<HeaderProps> = ({
-	fixed,
-	logo
+	logo,
+	links,
+	states
 }) => {
-	const onViewportChange = () => {
-		console.log('deu aquela scrollada meio manca');
+	const viewportContext = useContext(context);
+	const lastValues = useRef<{ isFixed: boolean | undefined }>({
+		isFixed: undefined
+	});
+
+	const getIsFixed = (scrollY: number): boolean => scrollY > 0;
+	const getState = (isFixed: boolean) => {
+		if (isFixed) {
+			return 'fixed';
+		} else {
+			return 'default';
+		}
 	};
 
-	useViewportListener(onViewportChange);
+	const [state, setState] = useState<StatesT | undefined>(undefined);
 
-	return (
-		<Container fixed={fixed}>
-			<Content>
-				<Link to={logo.link}>
-					<LogoContainer>
-						<DesktopHeaderLogo logo={logo} />
-					</LogoContainer>
-				</Link>
-			</Content>
-			<Background />
-		</Container>
-	);
+	const backgroundVariants = getVariants(states, 'background');
+	const contentVariants = getVariants(states, 'content');
+
+	useLayoutEffect(() => {
+		viewportContext.updatePosition();
+		const { top } = viewportContext.get();
+		const isFixed = getIsFixed(top);
+		setState(getState(isFixed));
+	}, []);
+
+	useViewportListener(({ top }) => {
+		const isFixed = getIsFixed(top);
+		if (isFixed !== lastValues.current.isFixed) {
+			setState(getState(isFixed));
+		}
+		lastValues.current.isFixed = isFixed;
+	});
+
+	if (state !== undefined) {
+		return (
+			<Container>
+				<ContentContainer>
+					<Content
+						initial={getState(getIsFixed(viewportContext.get().top))}
+						animate={state}
+						variants={contentVariants}
+						transformTemplate={transformTemplate}
+					>
+						<Link to={logo.link}>
+							<LogoContainer
+								logoWidth={logo.width}
+								logoAspectRatio={logo.aspectRatio}
+							>
+								<DesktopHeaderLogo states={states} logo={logo} />
+							</LogoContainer>
+						</Link>
+						<Nav>
+							{links.map((link, index) => (
+								<MenuItem link={link} key={index} />
+							))}
+						</Nav>
+					</Content>
+				</ContentContainer>
+				<Background
+					initial={getState(getIsFixed(viewportContext.get().top))}
+					animate={state}
+					variants={backgroundVariants}
+					transformTemplate={transformTemplate}
+				/>
+			</Container>
+		);
+	}
+
+	return null;
 };

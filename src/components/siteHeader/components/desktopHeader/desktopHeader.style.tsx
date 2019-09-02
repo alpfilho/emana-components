@@ -1,51 +1,73 @@
 import styled from 'styled-components';
-import posed from 'react-pose';
+import { motion } from 'framer-motion';
 
-import { ContentContainer } from 'components/contentContainer/contentContainer.view';
+import {
+	Container as CcContainer,
+	Content as CcContent
+} from 'components/contentContainer/contentContainer.style';
 
-const Header = posed.header({
-	default: {
-		/* Esse transform está vindo da prop (veja a documentação) */
-	},
-	fixed: {}
-});
-
-export const Container = styled(Header)`
-	position: ${({ fixed }) => {
-		if (fixed) {
-			return 'fixed';
-		}
-		return 'relative';
-	}};
+export const Container = styled.header`
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
-	z-index: 4;
 	height: auto;
-	will-change: transform;
+	padding-top: 32px;
+	padding-bottom: 16px;
+	z-index: 100;
 `;
 
-export const Content = styled(ContentContainer)`
-	background: red;
-`;
-
-export const LogoContainer = styled.div`
-	width: 300px;
-	height: auto;
+export const ContentContainer = styled(CcContainer)`
+	height: 100%;
 	position: relative;
 `;
 
-export const Background = styled.div`
+export const Content = styled(CcContent)`
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	will-change: transform, opacity;
+	position: relative;
+	z-index: 110;
+`;
+
+export const LogoContainer = styled.div<{
+	logoWidth: number;
+	logoAspectRatio: number;
+}>`
+	width: ${(props) => props.logoWidth}px;
+	height: ${(props) => props.logoWidth / props.logoAspectRatio}px;
+	position: relative;
+	z-index: 120;
+`;
+
+export const Nav = styled.nav`
+	width: auto;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	z-index: 110;
+`;
+
+export const Background = styled(motion.div)`
 	width: 100%;
 	height: 100%;
 	background-color: #fff;
-	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.075);
-	will-change: opacity;
-	z-index: 4;
+
+	will-change: transform, opacity;
+	position: absolute;
+	z-index: 100;
 `;

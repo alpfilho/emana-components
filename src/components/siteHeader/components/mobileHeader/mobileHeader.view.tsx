@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderProps } from 'components/siteHeader/siteHeader.view';
+import { HeaderProps } from '../../types';
 
 export const MobileHeader: React.FunctionComponent<HeaderProps> = () => {
 	return (
