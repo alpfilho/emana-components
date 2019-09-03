@@ -3,7 +3,7 @@ import { LinkProp } from '../../types';
 import {
 	Li,
 	Link
-} from 'components/siteHeader/components/menuItem/menuItem.style';
+} from 'components/oldSiteHeader/components/menuItem/menuItem.style';
 
 export interface MenuItemProps {
 	link: LinkProp;

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { screenSizes } from 'utils/viewport.utils';
-import { mediaQuery } from 'utils/style.utils';
+import { screenSizes, mediaQuery } from '@utils';
 
 export const Container = styled.div`
 	width: 100%;

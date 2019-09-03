@@ -1,12 +1,21 @@
 export {
-	ContentContainer
-} from 'components/contentContainer/contentContainer.view';
-
-export {
+	ContentContainer,
 	Container,
-	Content
-} from 'components/contentContainer/contentContainer.style';
+	Content,
+	ContextProvider,
+	SiteHeader
+} from '@components';
+
+export { ViewportContext, ViewportContextProvider } from '@contexts';
+
+export { useViewportValues } from '@hooks';
 
 export {
-	ContextProvider
-} from 'components/contextProvider/contextProvider.view';
+	mediaQuery,
+	getViewportWidth,
+	getViewportHeight,
+	getDeviceType,
+	getScrollY,
+	getScrollX,
+	screenSizes
+} from '@utils';

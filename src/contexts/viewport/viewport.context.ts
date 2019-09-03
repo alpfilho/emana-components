@@ -1,6 +1,4 @@
-import React, { createContext } from 'react';
-import { Viewport } from 'contexts/viewport/viewport.class';
+import { createContext } from 'react';
+import { ViewportContextT } from '@contexts/viewport/viewport.types';
 
-const viewport = new Viewport();
-
-export const context: React.Context<Viewport> = createContext(viewport);
+export const ViewportContext: ViewportContextT = createContext(null);

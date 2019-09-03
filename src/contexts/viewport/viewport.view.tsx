@@ -1,16 +1,34 @@
-import React, { useRef, useEffect } from 'react';
-import { Viewport } from './viewport.class';
-import { context } from './viewport.context';
+import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
+import { ViewportValues } from './viewport.class';
+import { ViewportContext } from './viewport.context';
+import { getDeviceType } from '@utils';
+import { DeviceT } from '@contexts/viewport/viewport.types';
 
 export const ViewportContextProvider: React.FunctionComponent<{}> = ({
 	children
 }) => {
-	const state = useRef<Viewport>(new Viewport());
+	const viewportValuesRef = useRef<ViewportValues>(new ViewportValues());
+	const [device, setDevice] = useState<DeviceT>(undefined);
+
+	useLayoutEffect(() => {
+		const { top } = viewportValuesRef.current.get();
+		const scrollY = top.get();
+		const deviceType = getDeviceType(scrollY);
+		setDevice(deviceType);
+	});
 
 	useEffect(() => {
 		const onViewportChange = () => {
-			state.current.updatePosition();
-			state.current.updateSize();
+			viewportValuesRef.current.updatePosition();
+			viewportValuesRef.current.updateSize();
+
+			const { top } = viewportValuesRef.current.get();
+			const scrollY = top.get();
+			const deviceType = getDeviceType(scrollY);
+
+			if (deviceType !== device) {
+				setDevice(deviceType);
+			}
 		};
 
 		/**
@@ -26,5 +44,11 @@ export const ViewportContextProvider: React.FunctionComponent<{}> = ({
 		};
 	}, []);
 
-	return <context.Provider value={state.current}>{children}</context.Provider>;
+	return (
+		<ViewportContext.Provider
+			value={{ viewportValues: viewportValuesRef.current.get(), device }}
+		>
+			{children}
+		</ViewportContext.Provider>
+	);
 };

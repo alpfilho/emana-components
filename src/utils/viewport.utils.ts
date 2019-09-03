@@ -1,3 +1,6 @@
+import { DeviceT } from '@contexts/viewport/viewport.types';
+import { Value } from 'popmotion/lib/reactions/value';
+
 export const screenSizes = {
 	/**
 	 * tablet
@@ -25,9 +28,7 @@ export const screenSizes = {
 	fullhd: 1920
 };
 
-export const getDeviceType = (
-	viewportWidth: number
-): 'mobile' | 'tablet' | 'desktop' => {
+export const getDeviceType = (viewportWidth: Value): DeviceT => {
 	if (viewportWidth < screenSizes.tablet) {
 		return 'mobile';
 	} else if (viewportWidth < screenSizes.sm) {

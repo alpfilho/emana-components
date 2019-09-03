@@ -15,8 +15,9 @@
 	],
 	"private": false,
 	"scripts": {
-		"build": "rollup --config",
-		"watch": "rollup --config --watch"
+		"build": "rollup --config --environment BUILD:production",
+    "build-dev": "rollup --config --environment BUILD:development",
+		"watch": "rollup --config --watch --environment BUILD:development"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
@@ -54,5 +55,8 @@
 		"styled-components": "^4.3.2",
 		"react-router-hash-link": "^1.2.2",
 		"popmotion": "^8.7.0"
+	},
+	"dependencies": {
+		"hey-listen": "^1.0.8"
 	}
 }

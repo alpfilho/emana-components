@@ -1,9 +1,7 @@
-const getScrollY = (): number => {
+export const getScrollY = (): number => {
 	return window.pageYOffset;
 };
 
-const getScrollX = (): number => {
+export const getScrollX = (): number => {
 	return window.pageXOffset;
 };
-
-export { getScrollY, getScrollX };

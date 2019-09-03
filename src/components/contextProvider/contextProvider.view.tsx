@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ViewportContextProvider } from 'contexts/viewport/viewport.view';
+import { ViewportContextProvider } from '@contexts';
 
 export const ContextProvider: React.FunctionComponent<{}> = ({ children }) => {
 	return <ViewportContextProvider>{children}</ViewportContextProvider>;

@@ -1,97 +1,64 @@
 import {
-	getDeviceType,
 	getViewportHeight,
-	getViewportWidth
-} from 'utils/viewport.utils';
+	getViewportWidth,
+	getScrollX,
+	getScrollY
+} from '@utils';
 
-import { getScrollX, getScrollY } from 'utils/scroll.utils';
+import { ValueReaction, value } from 'popmotion';
+import { ViewportI } from './viewport.types';
 
-export type ViewportListenerType = (viewport: viewportI) => any;
-
-interface viewportI {
-	top: number;
-	bottom: number;
-	left: number;
-	right: number;
-	height: number;
-	width: number;
-	device: 'mobile' | 'tablet' | 'desktop';
-}
-
-export class Viewport {
-	top: number;
-	bottom: number;
-	left: number;
-	right: number;
-	height: number;
-	width: number;
-	device: 'mobile' | 'tablet' | 'desktop';
-	private listeners: Array<ViewportListenerType>;
-	private isRunningListeners: boolean;
+export class ViewportValues {
+	top: ValueReaction;
+	left: ValueReaction;
+	height: ValueReaction;
+	width: ValueReaction;
 
 	constructor() {
-		this.listeners = [];
-		this.updatePosition();
-		this.updateSize();
+		const { top, left } = this.getPosition();
+		const { height, width } = this.getSize();
+
+		this.top = value(top);
+		this.left = value(left);
+		this.height = value(height);
+		this.width = value(width);
 	}
 
 	public get() {
-		const viewport: viewportI = {
+		const viewport: ViewportI = {
 			top: this.top,
-			bottom: this.bottom,
 			left: this.left,
-			right: this.right,
 			height: this.height,
-			width: this.width,
-			device: this.device
+			width: this.width
 		};
 
 		return viewport;
 	}
 
-	public addListener(listener: ViewportListenerType) {
-		const listenerId = this.listeners.length;
-		this.listeners.push(listener);
+	protected getPosition() {
 		return {
-			remove: () => {
-				this.listeners = this.listeners.splice(listenerId, 1);
-			}
+			top: getScrollY() || 0,
+			left: getScrollX() || 0
 		};
 	}
 
-	private requestListenersUpdate() {
-		if (!this.isRunningListeners) {
-			requestAnimationFrame(this.updateListeners.bind(this));
-			this.isRunningListeners = true;
-		}
-	}
-
-	private updateListeners() {
-		for (let index = 0; index < this.listeners.length; index++) {
-			this.listeners[index](this.get());
-		}
-
-		this.isRunningListeners = false;
-	}
-
 	public updatePosition() {
-		const y = getScrollY();
-		const x = getScrollX();
+		const { top, left } = this.getPosition();
 
-		this.top = y;
-		this.bottom = y + (this.height || 0);
+		this.top.update(top);
+		this.left.update(left);
+	}
 
-		this.left = x;
-		this.right = x + (this.width || 0);
-
-		this.requestListenersUpdate();
+	protected getSize() {
+		return {
+			height: getViewportHeight() || 0,
+			width: getViewportWidth() || 0
+		};
 	}
 
 	public updateSize() {
-		this.height = getViewportHeight();
-		this.width = getViewportWidth();
-		this.device = getDeviceType(this.width);
-
-		this.requestListenersUpdate();
+		const { height, width } = this.getSize();
+		this.height.update(height);
+		this.width.update(width);
 	}
 }

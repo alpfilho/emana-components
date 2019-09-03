@@ -13,6 +13,7 @@ export default [
 	{
 		input: 'src/index.ts',
 		external: Object.keys(pkg.peerDependencies || {}),
+		cache: true,
 		plugins: [
 			del({ targets: 'dist/*' }),
 			// alias({

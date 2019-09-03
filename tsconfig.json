@@ -21,10 +21,12 @@
 		"noUnusedParameters": true,
 		"baseUrl": "./",
 		"paths": {
-			"components/*": ["src/components/*"],
-			"utils/*": ["src/utils/*"],
-			"hooks/*": ["src/hooks/*"],
-			"contexts/*": ["src/contexts/*"]
+			"@components": ["src/components/index"],
+			"@components/*": ["src/components/*"],
+			"@utils": ["src/utils/index"],
+			"@hooks": ["src/hooks/index"],
+			"@contexts": ["src/contexts/index"],
+			"@contexts/*": ["src/contexts/*"]
 		}
 	}
 }
