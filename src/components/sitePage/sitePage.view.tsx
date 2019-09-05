@@ -17,11 +17,15 @@ export const SitePage: FunctionComponent<SitePageI> = ({
 	const { height } = useHeaderValues();
 
 	useLayoutEffect(() => {
-		height.subscribe((value: number) => {
+		const heightSubscription = height.subscribe((value: number) => {
 			if (value !== headerHeight) {
 				setHeaderHeight(value);
 			}
 		});
+
+		return () => {
+			heightSubscription.unsubscribe();
+		};
 	}, []);
 
 	return (

@@ -1,8 +1,9 @@
 {
 	"compilerOptions": {
 		"outDir": "dist",
-		"module": "ESNext",
-		"target": "ESNext",
+		"module": "esnext",
+		"target": "esnext",
+		"composite": true,
 		"sourceMap": true,
 		"allowJs": false,
 		"rootDir": "src",
