@@ -12,6 +12,7 @@ export interface ViewportI {
 
 export interface ViewportContextI {
 	viewportValues: ViewportI;
+	updateViewportValues: () => void;
 	device: DeviceT;
 }
 

@@ -16,7 +16,7 @@
 	"private": false,
 	"scripts": {
 		"build": "rollup --config --environment BUILD:production",
-    "build-dev": "rollup --config --environment BUILD:development",
+		"build-dev": "rollup --config --environment BUILD:development",
 		"watch": "rollup --config --watch --environment BUILD:development"
 	},
 	"devDependencies": {
