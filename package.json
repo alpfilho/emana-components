@@ -1,6 +1,6 @@
 {
 	"name": "@emana/components",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"description": "Componentes para projetos Emana",
 	"repository": "https://gitlab.emana.digital/dev/components.git",
 	"author": "Alfredo Peres <alfredo@emana.digital>",
