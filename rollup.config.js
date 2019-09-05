@@ -19,6 +19,7 @@ export default [
 			resolve({ extensions }),
 			commonjs(),
 			typescript({
+				/* Typescript com suporte a transforms */
 				typescript: ttypescript
 			}),
 			babel({ extensions, include: ['src/**/*'] })

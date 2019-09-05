@@ -4,7 +4,9 @@ export {
 	Content,
 	ContextProvider,
 	SiteHeader,
-	SitePage
+	SitePage,
+	SiteSection,
+	Hero
 } from '@components';
 
 export {

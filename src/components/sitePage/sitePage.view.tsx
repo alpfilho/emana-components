@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useLayoutEffect, useState } from 'react';
 
-import { SpMain } from './sitePage.style';
+import { SitePageMain } from './sitePage.style';
 import { useHeaderValues } from '@hooks';
 
 export interface SitePageI {
@@ -29,14 +29,14 @@ export const SitePage: FunctionComponent<SitePageI> = ({
 	}, []);
 
 	return (
-		<SpMain
+		<SitePageMain
 			paddingTop={
 				paddingTopProp !== undefined ? paddingTopProp : headerHeight || 0
 			}
 			background={background}
 		>
 			{children}
-		</SpMain>
+		</SitePageMain>
 	);
 };
 

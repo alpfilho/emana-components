@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Content, Container } from '@components/contentContainer';
 
-export const DkHeader = styled.header<{
+export const DesktopHeader = styled.header<{
 	fixed?: boolean;
 }>`
 	position: ${({ fixed }) => {
@@ -31,9 +31,13 @@ export const DkAnchor = styled.div<{
 		z-index: 110;
 		height: 100%;
 		will-change: opacity, transform, color, background;
+
 		${Content} {
 			height: 100%;
 			will-change: opacity, transform, color, background;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 `;

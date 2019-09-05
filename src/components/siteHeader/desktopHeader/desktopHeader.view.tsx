@@ -7,7 +7,7 @@ import React, {
 
 import { value } from 'popmotion';
 
-import { DkAnchor, DkBackground, DkHeader } from './desktopHeader.style';
+import { DkAnchor, DkBackground, DesktopHeader as DkHeader } from './desktopHeader.style';
 import { Container, Content } from '@components/contentContainer';
 
 import {

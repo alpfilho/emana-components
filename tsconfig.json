@@ -32,6 +32,7 @@
 		},
 		"plugins": [
 			{
+				/* Plugin para transformar caminhos da build */
 				"transform": "@zerollup/ts-transform-paths"
 			}
 		]

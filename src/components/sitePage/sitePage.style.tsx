@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SpMain = styled.main<{ paddingTop: number; background: string }>`
+export const SitePageMain = styled.main<{ paddingTop: number; background: string }>`
 	position: relative;
 	z-index: 0;
 	width: 100%;
