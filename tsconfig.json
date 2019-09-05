@@ -29,6 +29,11 @@
 			"@hooks/*": ["src/hooks/*"],
 			"@contexts": ["src/contexts/index"],
 			"@contexts/*": ["src/contexts/*"]
-		}
+		},
+		"plugins": [
+			{
+				"transform": "@zerollup/ts-transform-paths"
+			}
+		]
 	}
 }
