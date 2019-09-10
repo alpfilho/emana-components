@@ -72,7 +72,7 @@ export const HeaderLogo: FunctionComponent<HeaderLogoI> = ({
 			}
 
 			if (headerRef.current) {
-				headerRef.current.prevIsFixed = isFixedOnMount;
+				headerRef.current.prevIsFixed = isFixedOnMount ? 1 : 0;
 			}
 		}
 	}, []);
