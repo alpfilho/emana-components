@@ -7,6 +7,7 @@ export const SsSection = styled.section<{ paddingTop?: number }>`
 	${Container} {
 		${Content} {
 			padding-top: ${({ paddingTop }) => paddingTop || 92}px;
+			padding-bottom: 92px;
 		}
 	}
 `;

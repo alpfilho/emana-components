@@ -7,6 +7,8 @@ import { useViewportValues } from '@hooks';
 import { MobileHeader } from '@components/siteHeader/mobileHeader/mobileHeader.view';
 
 export const SiteHeader: FunctionComponent<SiteHeaderI> = ({
+	additionalClassNames,
+	additionalStyles,
 	fixed,
 	logo,
 	links,
@@ -25,6 +27,8 @@ export const SiteHeader: FunctionComponent<SiteHeaderI> = ({
 
 	return (
 		<DesktopHeader
+			additionalClassNames={additionalClassNames}
+			additionalStyles={additionalStyles}
 			paddingTop={paddingTop}
 			paddingBottom={paddingBottom}
 			backgroundColor={backgroundColor}

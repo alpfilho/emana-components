@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useLayoutEffect, useState } from 'react';
 import {
 	ViewportContext,
 	HeaderContext,
@@ -24,4 +24,32 @@ export const useHeaderValues = () => {
  */
 export const useScrollController = () => {
 	return useContext(ScrollControllerContext);
+};
+
+/**
+ * Hook para evitar o Header
+ */
+export const useAvoidHeader = (paddingTopProp?: number) => {
+	const { height } = useHeaderValues();
+	const [headerHeight, setHeaderHeight] = useState(0);
+
+	useLayoutEffect(() => {
+		if (paddingTopProp === undefined) {
+			const heightSubscription = height.subscribe((value: number) => {
+				if (value !== headerHeight) {
+					setHeaderHeight(value);
+				}
+			});
+
+			return () => {
+				heightSubscription.unsubscribe();
+			};
+		}
+		return undefined;
+	}, []);
+
+	return {
+		paddingTop:
+			paddingTopProp !== undefined ? paddingTopProp : headerHeight || 0
+	};
 };

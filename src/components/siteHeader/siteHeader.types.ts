@@ -2,6 +2,7 @@ import { ElementType } from 'react';
 import { Styler } from 'stylefire';
 import { LocationDescriptor } from 'history';
 import { ColdSubscription, ValueReaction } from 'popmotion';
+import { DefaultTheme, ThemedCssFunction } from 'styled-components';
 
 export interface FixedI {
 	triggerPoint: number;
@@ -15,8 +16,8 @@ export interface LogoPropI {
 }
 
 export interface LinkPropI {
-	readonly text: string;
-	readonly link: LocationDescriptor;
+	text: string;
+	link: LocationDescriptor;
 }
 
 export interface AnimatablePropsI {
@@ -33,12 +34,12 @@ export interface StateTypesI {
 
 export type LogoElementStatesT = StateTypesI | Array<StateTypesI>;
 
-export type AnimatableElementsT =
-	| 'background'
-	| 'container'
-	| 'content'
-	| 'menu'
-	| 'logo';
+// export type AnimatableElementsT =
+// 	| 'background'
+// 	| 'container'
+// 	| 'content'
+// 	| 'menu'
+// 	| 'logo';
 
 export interface StatesElementsI {
 	background?: StateTypesI;
@@ -60,10 +61,23 @@ export interface AnimatedElement extends HTMLElement {
 
 export interface SiteHeaderControlRefI {
 	isFixedValue: ValueReaction;
-	prevIsFixed: boolean;
+	prevIsFixed: 0 | 1 | undefined;
+	prevClientHeight: number | undefined;
+}
+
+export interface AdditionalClassNamesElementsI {
+	menuItem?: string;
+}
+
+export type AdditionalStyleT = ThemedCssFunction<DefaultTheme>;
+
+export interface AdditionalStylesI {
+	menuItem?: AdditionalStyleT;
 }
 
 export interface SiteHeaderI {
+	additionalClassNames?: AdditionalClassNamesElementsI;
+	additionalStyles?: AdditionalStylesI;
 	fixed?: FixedT;
 	logo: LogoT;
 	links: LinksT;
@@ -73,4 +87,7 @@ export interface SiteHeaderI {
 	backgroundColor?: string;
 }
 
-export interface MenuItemI extends LinkPropI {}
+export interface MenuItemI extends LinkPropI {
+	className?: string;
+	additionalStyles?: any;
+}

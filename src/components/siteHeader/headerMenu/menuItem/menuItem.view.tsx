@@ -1,13 +1,17 @@
 import React, { FunctionComponent } from 'react';
 
-import { MiLi } from './menuItem.style';
-import { HashLink } from 'react-router-hash-link';
+import { MiLi, MiLink } from './menuItem.style';
 import { MenuItemI } from '@components/siteHeader/siteHeader.types';
 
-export const MenuItem: FunctionComponent<MenuItemI> = ({ link, text }) => {
+export const MenuItem: FunctionComponent<MenuItemI> = ({
+	link,
+	text,
+	className,
+	additionalStyles
+}) => {
 	return (
-		<MiLi>
-			<HashLink to={link}>{text}</HashLink>
+		<MiLi className={className} additionalStyles={additionalStyles}>
+			<MiLink to={link}>{text}</MiLink>
 		</MiLi>
 	);
 };

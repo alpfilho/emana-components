@@ -53,4 +53,5 @@ export const DkBackground = styled.div<{ backgroundColor?: string }>`
 	right: 0;
 	will-change: opacity, transform, color, background;
 	background-color: ${({ backgroundColor }) => backgroundColor || 'none'};
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 `;

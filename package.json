@@ -20,12 +20,12 @@
 		"watch": "rollup --config --watch --environment BUILD:development"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.5.5",
+		"@babel/core": "^7.6.0",
 		"@babel/plugin-proposal-class-properties": "^7.5.5",
 		"@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-env": "^7.6.0",
 		"@babel/preset-react": "^7.0.0",
-		"@babel/preset-typescript": "^7.3.3",
+		"@babel/preset-typescript": "^7.6.0",
 		"@types/react": "^16.9.2",
 		"@types/react-dom": "^16.9.0",
 		"@types/react-router-dom": "^4.3.5",
@@ -45,7 +45,7 @@
 		"rollup-plugin-delete": "^1.1.0",
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-typescript2": "^0.23.0",
-		"styled-components": "^4.3.2",
+		"styled-components": "^5.0.0-beta.8",
 		"ts-node": "^8.3.0",
 		"ttypescript": "^1.5.7",
 		"typescript": "^3.6.2"
@@ -54,12 +54,11 @@
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"react-router-dom": "^5.0.1",
-		"styled-components": "^4.3.2",
+		"styled-components": "^5.0.0-beta.8",
 		"react-router-hash-link": "^1.2.2",
 		"popmotion": "^8.7.0"
 	},
 	"dependencies": {
-		"hey-listen": "^1.0.8",
-		"styled-normalize": "^8.0.6"
+		"hey-listen": "^1.0.8"
 	}
 }

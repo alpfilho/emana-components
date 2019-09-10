@@ -7,7 +7,11 @@ import React, {
 
 import { value } from 'popmotion';
 
-import { DkAnchor, DkBackground, DesktopHeader as DkHeader } from './desktopHeader.style';
+import {
+	DkAnchor,
+	DkBackground,
+	DesktopHeader as DkHeader
+} from './desktopHeader.style';
 import { Container, Content } from '@components/contentContainer';
 
 import {
@@ -27,6 +31,8 @@ import { HeaderMenu } from '@components/siteHeader/headerMenu';
 import { useHeaderValues, useViewportValues } from '@hooks';
 
 export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
+	additionalClassNames,
+	additionalStyles,
 	fixed,
 	links,
 	states,
@@ -37,7 +43,8 @@ export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
 }) => {
 	const controlRef = useRef<SiteHeaderControlRefI>({
 		isFixedValue: value(0),
-		prevIsFixed: false
+		prevIsFixed: undefined,
+		prevClientHeight: undefined
 	});
 
 	const { viewportValues, updateViewportValues } = useViewportValues();
@@ -54,8 +61,12 @@ export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
 	 * Atualiza o tamanho do header no context
 	 */
 	useLayoutEffect(() => {
-		if (dkHeaderRef.current) {
+		if (
+			dkHeaderRef.current &&
+			controlRef.current.prevClientHeight !== dkHeaderRef.current.clientHeight
+		) {
 			height.update(dkHeaderRef.current.clientHeight);
+			controlRef.current.prevClientHeight = dkHeaderRef.current.clientHeight;
 		}
 	});
 
@@ -89,8 +100,6 @@ export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
 					getState(states, 'content', { isFixed: isFixedOnMount })
 				);
 			}
-
-			controlRef.current.prevIsFixed = isFixedOnMount;
 		}
 	}, []);
 
@@ -101,10 +110,14 @@ export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
 		if (fixed && states) {
 			const { top } = viewportValues;
 			const scrollSubscription = top.subscribe((scrollY: number) => {
-				const isFixedOnScroll = checkIfIsFixed(scrollY, fixed);
+				const isFixedOnScroll = checkIfIsFixed(scrollY, fixed) ? 1 : 0;
+				const prevIsFixedOnScroll = controlRef.current.prevIsFixed;
 
-				if (isFixedOnScroll !== controlRef.current.prevIsFixed) {
-					controlRef.current.isFixedValue.update(isFixedOnScroll ? 1 : 0);
+				if (
+					prevIsFixedOnScroll !== undefined &&
+					isFixedOnScroll !== prevIsFixedOnScroll
+				) {
+					controlRef.current.isFixedValue.update(isFixedOnScroll);
 				}
 
 				controlRef.current.prevIsFixed = isFixedOnScroll;
@@ -127,7 +140,8 @@ export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
 		if (fixed && states) {
 			const isFixedSubscription = controlRef.current.isFixedValue.subscribe(
 				(isFixedOnUpdate: number) => {
-					const isFixed = !!isFixedOnUpdate;
+					/* Conversão de number para boolean */
+					const isFixed = isFixedOnUpdate === 1;
 
 					if (states.background) {
 						animateElement(
@@ -175,6 +189,8 @@ export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
 						/>
 						<HeaderMenu
 							links={links}
+							additionalClassNames={additionalClassNames}
+							additionalStyles={additionalStyles}
 							states={states ? states.menu : undefined}
 						/>
 					</Content>

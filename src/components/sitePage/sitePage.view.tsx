@@ -1,7 +1,7 @@
-import React, { FunctionComponent, useLayoutEffect, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { SitePageMain } from './sitePage.style';
-import { useHeaderValues } from '@hooks';
+import { useAvoidHeader } from '@hooks';
 
 export interface SitePageI {
 	paddingTop: number;
@@ -13,28 +13,10 @@ export const SitePage: FunctionComponent<SitePageI> = ({
 	paddingTop: paddingTopProp = undefined,
 	background
 }) => {
-	const [headerHeight, setHeaderHeight] = useState(0);
-	const { height } = useHeaderValues();
-
-	useLayoutEffect(() => {
-		const heightSubscription = height.subscribe((value: number) => {
-			if (value !== headerHeight) {
-				setHeaderHeight(value);
-			}
-		});
-
-		return () => {
-			heightSubscription.unsubscribe();
-		};
-	}, []);
+	const { paddingTop } = useAvoidHeader(paddingTopProp);
 
 	return (
-		<SitePageMain
-			paddingTop={
-				paddingTopProp !== undefined ? paddingTopProp : headerHeight || 0
-			}
-			background={background}
-		>
+		<SitePageMain paddingTop={paddingTop} background={background}>
 			{children}
 		</SitePageMain>
 	);
