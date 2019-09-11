@@ -72,7 +72,7 @@ export const HeaderLogo: FunctionComponent<HeaderLogoI> = ({
 			}
 
 			if (headerRef.current) {
-				headerRef.current.prevIsFixed = isFixedOnMount ? 1 : 0;
+				headerRef.current.prevIsFixed = undefined;
 			}
 		}
 	}, []);
@@ -121,7 +121,7 @@ export const HeaderLogo: FunctionComponent<HeaderLogoI> = ({
 	}, []);
 
 	/**
-	 * Todo render refaz a array
+	 * A cada render refaz a array
 	 */
 	controlRef.current.components = [];
 
