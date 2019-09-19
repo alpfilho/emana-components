@@ -5,3 +5,9 @@ export const getScrollY = (): number => {
 export const getScrollX = (): number => {
 	return window.pageXOffset;
 };
+
+export const getElementScrollOffset = (element: HTMLElement): number => {
+	return (
+		element.getBoundingClientRect().top + document.documentElement.scrollTop
+	);
+};

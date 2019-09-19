@@ -1,4 +1,4 @@
-export { getScrollX, getScrollY } from './scroll.utils';
+export { getScrollX, getScrollY, getElementScrollOffset } from './scroll.utils';
 
 export {
 	getDeviceType,

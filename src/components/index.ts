@@ -4,3 +4,4 @@ export { SiteHeader } from './siteHeader';
 export { SitePage } from './sitePage';
 export { SiteSection } from './siteSection';
 export { Hero } from './hero';
+export { HashLink } from './hashLink';

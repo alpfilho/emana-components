@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { Content, Container } from '@components/contentContainer';
 
-export const SsSection = styled.section<{ paddingTop?: number }>`
+export const SsSection = styled.section`
 	width: 100%;
 
 	${Container} {
 		${Content} {
-			padding-top: ${({ paddingTop }) => paddingTop || 92}px;
+			padding-top: 92px;
 			padding-bottom: 92px;
 		}
 	}

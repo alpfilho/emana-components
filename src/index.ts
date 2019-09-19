@@ -6,7 +6,8 @@ export {
 	SiteHeader,
 	SitePage,
 	SiteSection,
-	Hero
+	Hero,
+	HashLink
 } from '@components';
 
 export {

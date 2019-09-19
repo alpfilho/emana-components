@@ -21,7 +21,7 @@ import {
 	stopAnimation
 } from '@components/siteHeader/siteHeader.utils';
 import { useViewportValues } from '@hooks';
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from '@components/hashLink';
 
 export interface HeaderLogoI {
 	logo: LogoPropI;

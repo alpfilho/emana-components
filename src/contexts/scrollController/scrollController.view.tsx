@@ -5,16 +5,34 @@ import {
 	ScrollControllerProviderI
 } from './scrollController.types';
 
-import { viewportElement } from '@contexts/viewport/viewport.view';
-
 import { withRouter } from 'react-router-dom';
+import { spring } from 'popmotion';
+import { useViewportValues } from '@hooks';
 
 const ScrollControllerProviderComponent: FunctionComponent<
 	ScrollControllerProviderI
 > = ({ children, location: { pathname } }) => {
+	const { viewportValues } = useViewportValues();
+
 	const contextValue = useRef<ScrollControllerContextI>({
-		scrollTo: (y) => {
-			viewportElement.scrollTo(0, y);
+		scrollTo: (y, animated = true) => {
+			if (animated) {
+				const animation = spring({
+					from: viewportValues.top.get(),
+					to: y,
+					stiffness: 150,
+					damping: 300,
+					mass: 2
+				}).start((scrollY: number) => {
+					window.scrollTo(0, scrollY);
+				});
+
+				window.addEventListener('wheel', () => {
+					animation.stop();
+				});
+			} else {
+				window.scrollTo(0, y);
+			}
 		}
 	});
 
@@ -22,7 +40,7 @@ const ScrollControllerProviderComponent: FunctionComponent<
 	 * Funcionalidade para scrollar para o topo entre navegações
 	 */
 	useEffect(() => {
-		contextValue.current.scrollTo(0);
+		contextValue.current.scrollTo(0, false);
 	}, [pathname]);
 
 	return (

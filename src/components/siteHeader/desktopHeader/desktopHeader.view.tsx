@@ -113,10 +113,7 @@ export const DesktopHeader: FunctionComponent<SiteHeaderI> = ({
 				const isFixedOnScroll = checkIfIsFixed(scrollY, fixed) ? 1 : 0;
 				const prevIsFixedOnScroll = controlRef.current.prevIsFixed;
 
-				if (
-					prevIsFixedOnScroll !== undefined &&
-					isFixedOnScroll !== prevIsFixedOnScroll
-				) {
+				if (isFixedOnScroll !== prevIsFixedOnScroll) {
 					controlRef.current.isFixedValue.update(isFixedOnScroll);
 				}
 
