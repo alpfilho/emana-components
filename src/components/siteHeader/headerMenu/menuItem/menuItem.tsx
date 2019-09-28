@@ -1,9 +1,8 @@
 import React, { FunctionComponent } from 'react';
 
 import { MiLi, MiLink } from './menuItem.style';
-import { MenuItemI } from '@components/siteHeader/siteHeader.types';
 
-export const MenuItem: FunctionComponent<MenuItemI> = ({
+export const MenuItem: FunctionComponent<any> = ({
 	link,
 	text,
 	className,

@@ -1,7 +1,6 @@
 import { Context } from 'react';
-import { RouteComponentProps } from 'react-router-dom';
 
-export interface ScrollControllerProviderI extends RouteComponentProps {}
+export interface ScrollControllerProviderI {}
 
 export interface ScrollControllerContextI {
 	scrollTo: (y: number, animated?: boolean) => void;

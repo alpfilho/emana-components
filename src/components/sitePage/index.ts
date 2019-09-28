@@ -1,1 +1,1 @@
-export { SitePage } from './sitePage.view';
+export { SitePage } from './sitePage';

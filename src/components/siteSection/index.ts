@@ -1,1 +1,1 @@
-export { SiteSection } from './siteSection.view';
+export { SiteSection } from './siteSection';

@@ -1,30 +1,25 @@
 import styled from 'styled-components';
 import { Content, Container } from '@components/contentContainer';
 
-export const DesktopHeader = styled.header<{
-	fixed?: boolean;
+export const DesktopHeader = styled('header')<{
+	fixed: boolean;
 }>`
-	position: ${({ fixed }) => {
-		if (fixed === true) {
-			return 'fixed';
-		}
-		return 'relative';
-	}};
-
+	position: ${({ fixed }) => (fixed ? 'fixed' : 'relative')};
 	width: 100%;
 	height: auto;
 	z-index: 100;
 `;
 
-export const DkAnchor = styled.div<{
-	paddingTop?: number;
-	paddingBottom?: number;
+export const DkAnchor = styled('div')<{
+	addStyles?: {
+		anchor: any;
+		container: any;
+		content: any;
+	};
 }>`
 	position: relative;
 	width: 100%;
 	height: 100%;
-	padding-top: ${({ paddingTop }) => paddingTop || 32}px;
-	padding-bottom: ${({ paddingBottom }) => paddingBottom || 32}px;
 
 	${Container} {
 		position: relative;
@@ -33,16 +28,21 @@ export const DkAnchor = styled.div<{
 		will-change: opacity, transform, color, background;
 
 		${Content} {
-			height: 100%;
 			will-change: opacity, transform, color, background;
+			height: 100%;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+			padding-top: 32px;
+			padding-bottom: 32px;
 		}
 	}
+	
+	${({ addStyles }) => addStyles && addStyles.anchor ? addStyles.anchor: }
 `;
 
-export const DkBackground = styled.div<{ backgroundColor?: string }>`
+export const DkBackground = styled.div<{ additionalStyles?: any }>`
+	will-change: opacity, transform, color, background;
 	position: absolute;
 	z-index: 100;
 	width: 100%;
@@ -51,7 +51,9 @@ export const DkBackground = styled.div<{ backgroundColor?: string }>`
 	bottom: 0;
 	left: 0;
 	right: 0;
-	will-change: opacity, transform, color, background;
-	background-color: ${({ backgroundColor }) => backgroundColor || 'none'};
+
+	background-color: #fff;
 	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+
+	${({ additionalStyles }) => additionalStyles}
 `;

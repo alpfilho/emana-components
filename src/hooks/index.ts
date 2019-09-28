@@ -1,13 +1,16 @@
 import { useContext, useLayoutEffect, useState } from 'react';
 
 import { ViewportContext } from '@contexts/viewport/viewport.context';
+import { ViewportContextI } from '@contexts/viewport/viewport.types';
+
 import { HeaderContext } from '@contexts/header/header.context';
+
 import { ScrollControllerContext } from '@contexts/scrollController/scrollController.context';
 
 /**
- * Hook para usar a viewport do contexto
+ * Hook para usar o context da viewport
  */
-export const useViewportValues = () => {
+export const useViewportValues = (): ViewportContextI => {
 	return useContext(ViewportContext);
 };
 

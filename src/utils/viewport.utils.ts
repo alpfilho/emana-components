@@ -29,9 +29,9 @@ export const screenSizes = {
 };
 
 export const getDeviceType = (viewportWidth: Value): DeviceT => {
-	if (viewportWidth < screenSizes.tablet) {
+	if (viewportWidth <= screenSizes.tablet) {
 		return 'mobile';
-	} else if (viewportWidth < screenSizes.sm) {
+	} else if (viewportWidth <= screenSizes.sm) {
 		return 'tablet';
 	}
 	return 'desktop';

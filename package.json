@@ -1,6 +1,6 @@
 {
 	"name": "@emana/components",
-	"version": "2.5.1",
+	"version": "3.0.0",
 	"description": "Componentes para projetos Emana",
 	"repository": "https://gitlab.emana.digital/dev/components.git",
 	"author": "Alfredo Peres <alfredo@emana.digital>",
@@ -20,10 +20,10 @@
 		"watch": "rollup --config --watch --environment BUILD:development"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.6.0",
+		"@babel/core": "^7.6.2",
 		"@babel/plugin-proposal-class-properties": "^7.5.5",
-		"@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-		"@babel/preset-env": "^7.6.0",
+		"@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+		"@babel/preset-env": "^7.6.2",
 		"@babel/preset-react": "^7.0.0",
 		"@babel/preset-typescript": "^7.6.0",
 		"@types/react": "^16.9.2",
@@ -37,7 +37,7 @@
 		"prettier": "^1.18.2",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
-		"react-router-dom": "^5.0.1",
+		"react-router-dom": "^5.1.0",
 		"react-router-hash-link": "^1.2.2",
 		"rollup": "^1.21.4",
 		"rollup-plugin-babel": "^4.3.3",
@@ -45,7 +45,7 @@
 		"rollup-plugin-delete": "^1.1.0",
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-typescript2": "^0.23.0",
-		"styled-components": "^5.0.0-beta.9",
+		"styled-components": "^5.0.0-beta.8-groupsizefix",
 		"ts-node": "^8.4.1",
 		"ttypescript": "^1.5.7",
 		"typescript": "^3.6.3"
@@ -53,7 +53,7 @@
 	"peerDependencies": {
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
-		"react-router-dom": "^5.0.1",
+		"react-router-dom": "^5.1.0",
 		"styled-components": "^5.0.0-beta.9",
 		"react-router-hash-link": "^1.2.2",
 		"popmotion": "^8.7.0"

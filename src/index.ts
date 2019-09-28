@@ -3,11 +3,15 @@ export {
 	Container,
 	Content,
 	ContextProvider,
-	SiteHeader,
+	DeviceSwitch,
 	SitePage,
 	SiteSection,
+	DesktopHeader,
+	MobileHeader,
 	Hero,
-	HashLink
+	HashLink,
+	PageLoader,
+	TopPageLoading
 } from '@components';
 
 export {

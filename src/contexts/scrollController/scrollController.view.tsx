@@ -1,35 +1,47 @@
-import React, { FunctionComponent, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+// @ts-ignore
+import { useLocation } from 'react-router-dom';
+
 import { ScrollControllerContext } from './scrollController.context';
 import {
 	ScrollControllerContextI,
 	ScrollControllerProviderI
 } from './scrollController.types';
 
-import { withRouter } from 'react-router-dom';
 import { spring } from 'popmotion';
 import { useViewportValues } from '@hooks';
 
-const ScrollControllerProviderComponent: FunctionComponent<
-	ScrollControllerProviderI
-> = ({ children, location: { pathname } }) => {
+export const ScrollControllerProvider: React.FC<ScrollControllerProviderI> = ({
+	children
+}) => {
+	const { pathname } = useLocation();
+
 	const { viewportValues } = useViewportValues();
 
 	const contextValue = useRef<ScrollControllerContextI>({
 		scrollTo: (y, animated = true) => {
 			if (animated) {
+				const stopAnimationOnEvent = () => {
+					animation.stop();
+					window.removeEventListener('wheel', stopAnimationOnEvent);
+				};
+
 				const animation = spring({
 					from: viewportValues.top.get(),
 					to: y,
 					stiffness: 150,
-					damping: 300,
+					damping: 400,
 					mass: 2
-				}).start((scrollY: number) => {
-					window.scrollTo(0, scrollY);
+				}).start({
+					update: (scrollY: number) => {
+						window.scrollTo(0, scrollY);
+					},
+					complete: () => {
+						window.removeEventListener('wheel', stopAnimationOnEvent);
+					}
 				});
 
-				window.addEventListener('wheel', () => {
-					animation.stop();
-				});
+				window.addEventListener('wheel', stopAnimationOnEvent);
 			} else {
 				window.scrollTo(0, y);
 			}
@@ -40,7 +52,9 @@ const ScrollControllerProviderComponent: FunctionComponent<
 	 * Funcionalidade para scrollar para o topo entre navegações
 	 */
 	useEffect(() => {
-		contextValue.current.scrollTo(0, false);
+		if (viewportValues.top.get() !== 0) {
+			contextValue.current.scrollTo(0, false);
+		}
 	}, [pathname]);
 
 	return (
@@ -49,7 +63,3 @@ const ScrollControllerProviderComponent: FunctionComponent<
 		</ScrollControllerContext.Provider>
 	);
 };
-
-export const ScrollControllerProvider = withRouter(
-	ScrollControllerProviderComponent
-);

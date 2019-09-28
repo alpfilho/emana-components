@@ -6,23 +6,17 @@ import { useAvoidHeader } from '@hooks';
 export interface SitePageI {
 	className?: string;
 	paddingTop?: number;
-	background?: string;
 }
 
 export const SitePage: FunctionComponent<SitePageI> = ({
 	className,
 	children,
-	paddingTop: paddingTopProp = undefined,
-	background
+	paddingTop: paddingTopProp = undefined
 }) => {
 	const { paddingTop } = useAvoidHeader(paddingTopProp);
 
 	return (
-		<SitePageMain
-			className={className}
-			paddingTop={paddingTop}
-			background={background}
-		>
+		<SitePageMain className={className} paddingTop={paddingTop}>
 			{children}
 		</SitePageMain>
 	);

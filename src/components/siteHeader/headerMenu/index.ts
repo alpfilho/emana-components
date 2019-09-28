@@ -1,1 +1,1 @@
-export { HeaderMenu } from './headerMenu.view';
+export { HeaderMenu } from './headerMenu';

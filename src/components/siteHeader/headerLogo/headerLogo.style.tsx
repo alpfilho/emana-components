@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const LogoContainer = styled.div<{
-	logoWidth: number;
-	logoAspectRatio: number;
+	logoWidth?: number;
+	logoAspectRatio?: number;
 }>`
 	/* A largura da logo vem da Prop */
 	width: ${({ logoWidth }) => {

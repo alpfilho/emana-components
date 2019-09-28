@@ -1,1 +1,1 @@
-export { HeaderLogo, HeaderLogoI } from './headerLogo.view';
+export { HeaderLogo, HeaderLogoI } from './headerLogo';

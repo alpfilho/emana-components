@@ -1,1 +1,1 @@
-export { ContextProvider } from './contextProvider.view';
+export { ContextProvider } from './contextProvider';

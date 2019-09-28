@@ -6,9 +6,7 @@ import { DeviceT, ViewportContextI } from '@contexts/viewport/viewport.types';
 
 export const viewportElement = window;
 
-export const ViewportContextProvider: React.FunctionComponent<{}> = ({
-	children
-}) => {
+export const ViewportContextProvider: React.FC = ({ children }) => {
 	const viewportValuesRef = useRef<ViewportValues>(new ViewportValues());
 	const [device, setDevice] = useState<DeviceT>(undefined);
 
@@ -25,7 +23,7 @@ export const ViewportContextProvider: React.FunctionComponent<{}> = ({
 		viewportValuesRef.current.updatePosition();
 		viewportValuesRef.current.updateSize();
 		updateDevice();
-	});
+	}, []);
 
 	useEffect(() => {
 		const onViewportChange = () => {

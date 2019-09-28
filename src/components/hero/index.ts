@@ -1,1 +1,1 @@
-export { Hero } from './hero.view';
+export { Hero } from './hero';
