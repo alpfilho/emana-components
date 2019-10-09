@@ -1,3 +1,3 @@
 # Components
 
-Componentes básicos para projetos Emana
+Basic components for Emana's projects
