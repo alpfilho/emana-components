@@ -1,1 +1,9 @@
+# IDE's
+/.vscode
+
+# Dependencies
 node_modules/
+
+# Front-end Build
+public/assets/
+
