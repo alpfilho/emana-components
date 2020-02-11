@@ -16,7 +16,7 @@
 		"LICENSE",
 		"README.md"
 	],
-	"private": true,
+	"private": false,
 	"devDependencies": {
 		"@types/react": "^16.9.19",
 		"@types/react-dom": "^16.9.5",
