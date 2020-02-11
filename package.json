@@ -1,6 +1,6 @@
 {
 	"name": "@alpfilho/emana-web-components",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Componentes comuns para projetos Emana",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
