@@ -1,40 +1,6 @@
 {
-	"compilerOptions": {
-		"outDir": "dist",
-		"module": "esnext",
-		"target": "esnext",
-		"composite": true,
-		"sourceMap": true,
-		"allowJs": false,
-		"rootDir": "src",
-		"jsx": "react",
-		"moduleResolution": "node",
-		"declaration": true,
-		"declarationMap": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"diagnostics": true,
-		"esModuleInterop": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
-		"suppressImplicitAnyIndexErrors": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"baseUrl": "./",
-		"paths": {
-			"@components": ["src/components/index"],
-			"@components/*": ["src/components/*"],
-			"@utils": ["src/utils/index"],
-			"@hooks": ["src/hooks/index"],
-			"@hooks/*": ["src/hooks/*"],
-			"@contexts": ["src/contexts/index"],
-			"@contexts/*": ["src/contexts/*"]
-		},
-		"plugins": [
-			{
-				/* Plugin para transformar caminhos da build */
-				"transform": "@zerollup/ts-transform-paths"
-			}
-		]
-	}
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react"
+  }
 }

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c93e9199-9a29-42c2-95b0-0c69813b2ae0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contentContainer/contentContainer.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contentContainer/contentContainer.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contentContainer/contentContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contentContainer/contentContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contentContainer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/contentContainer/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contextProvider/contextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contextProvider/contextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contextProvider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/contextProvider/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deviceSwitch/deviceSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/deviceSwitch/deviceSwitch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deviceSwitch/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/deviceSwitch/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hashLink/hashLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hashLink/hashLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hashLink/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/hashLink/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero/hero.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/hero.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pageLoader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/pageLoader/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pageLoader/pageLoader.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/pageLoader/pageLoader.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pageLoader/pageLoader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pageLoader/pageLoader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/desktopHeader/desktopHeader.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/desktopHeader/desktopHeader.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/desktopHeader/desktopHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/desktopHeader/desktopHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/desktopHeader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/desktopHeader/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/header.hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/header.hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/header.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/header.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/header.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/header.utils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerLogo/headerLogo.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerLogo/headerLogo.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerLogo/headerLogo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerLogo/headerLogo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerLogo/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerLogo/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/headerMenu.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/headerMenu.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/headerMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/headerMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/menuItem/menuItem.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/menuItem/menuItem.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/menuItem/menuItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/menuItem/menuItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/mobileHeader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/mobileHeader/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/mobileHeader/mobileHeader.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/mobileHeader/mobileHeader.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/mobileHeader/mobileHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/mobileHeader/mobileHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sitePage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/sitePage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sitePage/sitePage.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sitePage/sitePage.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sitePage/sitePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sitePage/sitePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteSection/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteSection/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteSection/siteSection.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteSection/siteSection.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/siteSection/siteSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteSection/siteSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spinner/spinner.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/spinner/spinner.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spinner/spinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/spinner/spinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/topPageLoading/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/topPageLoading/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/topPageLoading/topPageLoading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/topPageLoading/topPageLoading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/header/header.context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/header.context.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/header/header.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/header.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/header/header.view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/header.view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/header/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/scrollController.context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/scrollController.context.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/scrollController.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/scrollController.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/scrollController.view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/scrollController.view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.class.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.context.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/scroll.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/scroll.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/style.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/style.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/viewport.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/viewport.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Xdwhw18zecaY5jJ8999q7zMkmz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c93e9199-9a29-42c2-95b0-0c69813b2ae0" name="Default Changelist" comment="" />
+      <created>1581389401728</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581389401728</updated>
+      <workItem from="1581389404988" duration="2435000" />
+      <workItem from="1581394200283" duration="2779000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581396984772">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="304" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.978@0.23.1680.978" timestamp="1581396984772" />
+    <state width="1638" height="247" key="GridCell.Tab.0.bottom" timestamp="1581396940383">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.978@0.23.1680.978" timestamp="1581396940383" />
+    <state width="1638" height="247" key="GridCell.Tab.0.center" timestamp="1581396940382">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.978@0.23.1680.978" timestamp="1581396940382" />
+    <state width="1638" height="247" key="GridCell.Tab.0.left" timestamp="1581396940381">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.978@0.23.1680.978" timestamp="1581396940381" />
+    <state width="1638" height="247" key="GridCell.Tab.0.right" timestamp="1581396940383">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.978@0.23.1680.978" timestamp="1581396940383" />
+    <state x="341" y="160" key="SettingsEditor" timestamp="1581393865320">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="341" y="160" key="SettingsEditor/0.23.1680.978@0.23.1680.978" timestamp="1581393865320" />
+  </component>
+</project>
