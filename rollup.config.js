@@ -20,7 +20,8 @@ export default [
 			commonjs(),
 			typescript({
 				/* Typescript com suporte a transforms */
-				typescript: ttypescript
+				typescript: ttypescript,
+        objectHashIgnoreUnknownHack: true
 			}),
 			babel({ extensions, include: ['src/**/*'] })
 		],

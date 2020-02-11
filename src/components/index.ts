@@ -3,7 +3,7 @@ export { ContextProvider } from './contextProvider';
 export { DeviceSwitch } from './deviceSwitch';
 export { SitePage } from './sitePage';
 export { SiteSection } from './siteSection';
-export { DesktopHeader, MobileHeader } from './siteHeader';
+
 export { Hero } from './hero';
 export { HashLink } from './hashLink';
 export { PageLoader } from './pageLoader';
