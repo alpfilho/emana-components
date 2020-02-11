@@ -19,7 +19,7 @@
 		"LICENSE",
 		"README.md"
 	],
-	"private": false,
+	"private": true,
 	"scripts": {
 		"build": "rollup --config --environment BUILD:production",
 		"build-dev": "rollup --config --environment BUILD:development",
