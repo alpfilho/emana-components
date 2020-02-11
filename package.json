@@ -1,6 +1,6 @@
 {
 	"name": "@alpfilho/emana-web-components",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Componentes comuns para projetos Emana",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
@@ -19,8 +19,8 @@
 	"private": true,
 	"devDependencies": {
 		"@types/react": "^16.9.19",
-		"@types/react-is": "^16.7.1",
 		"@types/react-dom": "^16.9.5",
+		"@types/react-is": "^16.7.1",
 		"@types/react-router-dom": "^4.3.5",
 		"@types/react-router-hash-link": "^1.2.1",
 		"@types/styled-components": "^4.1.19",
@@ -39,8 +39,8 @@
 		"framer-motion": "^1.8.4",
 		"popmotion": "^9.0.0-beta-8",
 		"react": "^16.12.0",
-		"react-is": "^16.12.0",
 		"react-dom": "^16.12.0",
+		"react-is": "^16.12.0",
 		"react-router-dom": "^5.1.2",
 		"react-router-hash-link": "^1.2.2",
 		"styled-components": "^5.0.1",
