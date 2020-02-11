@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    tags: 
+    tags:
       - v*
 
 jobs:
@@ -13,14 +13,8 @@ jobs:
       uses: actions/checkout@v2
       with:
         clean: 'false'
-      
-    - name: Instalação de dependências
-      run: yarn install
-      
-    - name: Build
-      run: yarn build
 
     - name: Publicação
       run:  |
         echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_PKG_TOKEN }}" > .npmrc
-        yarn publish --access restricted 
+        yarn publish --access restricted

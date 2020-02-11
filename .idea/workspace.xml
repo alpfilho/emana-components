@@ -2,75 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c93e9199-9a29-42c2-95b0-0c69813b2ae0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contentContainer/contentContainer.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contentContainer/contentContainer.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contentContainer/contentContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contentContainer/contentContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contentContainer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/contentContainer/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contextProvider/contextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contextProvider/contextProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contextProvider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/contextProvider/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/deviceSwitch/deviceSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/deviceSwitch/deviceSwitch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/deviceSwitch/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/deviceSwitch/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hashLink/hashLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hashLink/hashLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hashLink/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/hashLink/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero/hero.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/hero.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageLoader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/pageLoader/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageLoader/pageLoader.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/pageLoader/pageLoader.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageLoader/pageLoader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pageLoader/pageLoader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/desktopHeader/desktopHeader.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/desktopHeader/desktopHeader.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/desktopHeader/desktopHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/desktopHeader/desktopHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/desktopHeader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/desktopHeader/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/header.hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/header.hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/header.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/header.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/header.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/header.utils.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerLogo/headerLogo.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerLogo/headerLogo.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerLogo/headerLogo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerLogo/headerLogo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerLogo/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerLogo/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/headerMenu.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/headerMenu.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/headerMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/headerMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/menuItem/menuItem.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/menuItem/menuItem.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/headerMenu/menuItem/menuItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/headerMenu/menuItem/menuItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/mobileHeader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/mobileHeader/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/mobileHeader/mobileHeader.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/mobileHeader/mobileHeader.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteHeader/mobileHeader/mobileHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteHeader/mobileHeader/mobileHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sitePage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/sitePage/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sitePage/sitePage.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sitePage/sitePage.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sitePage/sitePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sitePage/sitePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteSection/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteSection/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteSection/siteSection.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteSection/siteSection.style.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/siteSection/siteSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/siteSection/siteSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spinner/spinner.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/spinner/spinner.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spinner/spinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/spinner/spinner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/topPageLoading/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/topPageLoading/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/topPageLoading/topPageLoading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/topPageLoading/topPageLoading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/header/header.context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/header.context.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/header/header.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/header.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/header/header.view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/header.view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/header/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/header/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/scrollController.context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/scrollController.context.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/scrollController.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/scrollController.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/scrollController/scrollController.view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/scrollController.view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.context.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/viewport/viewport.view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/viewport/viewport.view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/scroll.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/scroll.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/style.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/style.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/viewport.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/viewport.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581389401728</updated>
       <workItem from="1581389404988" duration="2435000" />
-      <workItem from="1581394200283" duration="2779000" />
+      <workItem from="1581394200283" duration="3460000" />
     </task>
     <servers />
   </component>
