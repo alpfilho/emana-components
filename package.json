@@ -1,11 +1,11 @@
 {
-	"name": "@alpfilho/emana-web-components",
-	"version": "2.0.2",
+	"name": "@alpfilho/emana-web-toolkit",
+	"version": "1.0.0",
 	"description": "Componentes comuns para projetos Emana",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
-	"repository": "https://github.com/alpfilho/emana-web-components",
+	"repository": "https://github.com/alpfilho/emana-web-toolkit",
 	"author": {
 		"name": "Alfredo Peres",
 		"email": "alfredo@emana.digital"
