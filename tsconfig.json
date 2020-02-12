@@ -1,6 +1,21 @@
 {
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "jsx": "react"
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@config": ["./config/index"],
+      "@hooks": ["./hooks/index"],
+      "@hooks/*": ["./hooks/*"]
+    }
   }
 }

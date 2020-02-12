@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-// @ts-ignore
 import { useLocation } from 'react-router-dom';
+import { spring } from 'popmotion';
 
 import { ScrollControllerContext } from './scrollController.context';
+
 import {
 	ScrollControllerContextI,
 	ScrollControllerProviderI
 } from './scrollController.types';
 
-import { spring } from 'popmotion';
-import { useViewportValues } from '../../hooks';
+import { useViewportValues } from '@hooks';
 
 export const ScrollControllerProvider: React.FC<ScrollControllerProviderI> = ({
 	children

@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c93e9199-9a29-42c2-95b0-0c69813b2ae0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingBar/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingBar/loadingBar.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingBar/loadingBar.slice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingBar/loadingBar.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingBar/loadingBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingBar/loadingBar.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingFallback/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loadingFallback/loadingFallback.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sitePage/sitePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sitePage/sitePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contexts/scrollController/scrollController.view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/scrollController/scrollController.view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Xdwhw18zecaY5jJ8999q7zMkmz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -31,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../emana-styles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,6 +57,9 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -60,8 +76,7 @@
       <updated>1581389401728</updated>
       <workItem from="1581389404988" duration="2435000" />
       <workItem from="1581394200283" duration="4344000" />
-      <workItem from="1581438530966" duration="33000" />
-      <workItem from="1581438575724" duration="1624000" />
+      <workItem from="1581464568507" duration="2501000" />
     </task>
     <servers />
   </component>

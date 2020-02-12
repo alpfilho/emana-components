@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 
 import { SitePageMain } from './sitePage.style';
-import { useAvoidHeader } from '../../hooks';
+import { useAvoidHeader } from '@hooks';
 
 export interface SitePageI {
 	className?: string;
