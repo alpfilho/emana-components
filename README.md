@@ -1,3 +1,3 @@
 # Components
 
-Componentes comuns para projetos Emana
+Componentes e utilidades gerais para projetos do Emana
