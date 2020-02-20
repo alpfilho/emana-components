@@ -1,6 +1,5 @@
 import { resolve } from 'path';
 import webpack from 'webpack';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 import pkg from './package.json';
 
@@ -39,8 +38,7 @@ const config: webpack.Configuration = {
 				}
 			}
 		]
-	},
-	plugins: [new CleanWebpackPlugin()]
+	}
 };
 
 export default config;
