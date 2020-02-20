@@ -2,85 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97a6140b-ccda-4b7d-9c6c-a9019b028eb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Dev_Watch.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Prod_Build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contentContainer/contentContainer.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contentContainer/contentContainer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contentContainer/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contextProvider/contextProvider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contextProvider/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/deviceSwitch/deviceSwitch.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/deviceSwitch/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hashLink/hashLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hashLink/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hero/hero.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hero/hero.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hero/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingBar/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingBar/loadingBar.selectors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingBar/loadingBar.slice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingBar/loadingBar.styles.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingBar/loadingBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingBar/loadingBar.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingFallback/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loadingFallback/loadingFallback.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pageLoader/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pageLoader/pageLoader.style.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pageLoader/pageLoader.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/desktopHeader/desktopHeader.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/desktopHeader/desktopHeader.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/desktopHeader/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/header.hooks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/header.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/header.utils.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerLogo/headerLogo.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerLogo/headerLogo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerLogo/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerMenu/headerMenu.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerMenu/headerMenu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerMenu/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerMenu/menuItem/menuItem.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/headerMenu/menuItem/menuItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/mobileHeader/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/mobileHeader/mobileHeader.style.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteHeader/mobileHeader/mobileHeader.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sitePage/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sitePage/sitePage.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sitePage/sitePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteSection/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteSection/siteSection.style.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/siteSection/siteSection.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/spinner/spinner.style.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/spinner/spinner.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/topPageLoading/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/topPageLoading/topPageLoading.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/header/header.context.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/header/header.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/header/header.view.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/header/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/scrollController/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/scrollController/scrollController.context.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/scrollController/scrollController.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/scrollController/scrollController.view.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/viewport/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/viewport/viewport.class.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/viewport/viewport.context.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/viewport/viewport.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/viewport/viewport.view.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/emana-web-toolkit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/emana-web-toolkit.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/index.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/scroll.utils.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/scroll.utils.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/style.utils.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/style.utils.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/viewport.utils.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/viewport.utils.d.ts.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/scroll.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/scroll.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/style.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/style.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/viewport.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/viewport.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +66,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build.types">
+  <component name="RunManager" selected="npm.Prod Build">
     <configuration name="build.types" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -361,29 +298,29 @@
       <screen x="67" y="27" width="1533" height="873" />
     </state>
     <state x="616" y="220" width="424" height="484" key="FileChooserDialogImpl/67.27.1533.873@67.27.1533.873" timestamp="1581871937335" />
-    <state width="1638" height="377" key="GridCell.Tab.0.bottom" timestamp="1582159587713">
+    <state width="1638" height="377" key="GridCell.Tab.0.bottom" timestamp="1582160562308">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.978/-113.-1027.1680.1027@0.23.1680.978" timestamp="1581535804679" />
-    <state width="1638" height="377" key="GridCell.Tab.0.bottom/0.23.1680.978@0.23.1680.978" timestamp="1582159587713" />
+    <state width="1638" height="377" key="GridCell.Tab.0.bottom/0.23.1680.978@0.23.1680.978" timestamp="1582160562308" />
     <state width="1487" height="202" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1581817059347" />
-    <state width="1638" height="377" key="GridCell.Tab.0.center" timestamp="1582159587713">
+    <state width="1638" height="377" key="GridCell.Tab.0.center" timestamp="1582160562308">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.978/-113.-1027.1680.1027@0.23.1680.978" timestamp="1581535804677" />
-    <state width="1638" height="377" key="GridCell.Tab.0.center/0.23.1680.978@0.23.1680.978" timestamp="1582159587713" />
+    <state width="1638" height="377" key="GridCell.Tab.0.center/0.23.1680.978@0.23.1680.978" timestamp="1582160562308" />
     <state width="1487" height="202" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1581817059346" />
-    <state width="1638" height="377" key="GridCell.Tab.0.left" timestamp="1582159587712">
+    <state width="1638" height="377" key="GridCell.Tab.0.left" timestamp="1582160562308">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.978/-113.-1027.1680.1027@0.23.1680.978" timestamp="1581535804676" />
-    <state width="1638" height="377" key="GridCell.Tab.0.left/0.23.1680.978@0.23.1680.978" timestamp="1582159587712" />
+    <state width="1638" height="377" key="GridCell.Tab.0.left/0.23.1680.978@0.23.1680.978" timestamp="1582160562308" />
     <state width="1487" height="202" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1581817059346" />
-    <state width="1638" height="377" key="GridCell.Tab.0.right" timestamp="1582159587713">
+    <state width="1638" height="377" key="GridCell.Tab.0.right" timestamp="1582160562308">
       <screen x="0" y="23" width="1680" height="978" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.978/-113.-1027.1680.1027@0.23.1680.978" timestamp="1581535804678" />
-    <state width="1638" height="377" key="GridCell.Tab.0.right/0.23.1680.978@0.23.1680.978" timestamp="1582159587713" />
+    <state width="1638" height="377" key="GridCell.Tab.0.right/0.23.1680.978@0.23.1680.978" timestamp="1582160562308" />
     <state width="1487" height="202" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1581817059346" />
     <state x="478" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1581871107252">
       <screen x="67" y="27" width="1533" height="873" />

@@ -15,7 +15,7 @@ const config: webpack.Configuration = {
 		path: resolve(__dirname, 'dist'),
 		filename: 'emana-web-toolkit.js',
 		library: 'emanaWebToolkit',
-		libraryTarget: 'commonjs'
+		libraryTarget: 'umd'
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx']

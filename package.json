@@ -5,8 +5,9 @@
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
-	"main": "dist/emana-web-toolkit.js",
-	"repository": "https://github.com/alpfilho/emana-web-toolkit",
+	"main": "./dist/emana-web-toolkit.js",
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/alpfilho/emana-web-toolkit",
 	"author": {
 		"name": "Alfredo Peres",
 		"email": "alfredo@emana.digital"
