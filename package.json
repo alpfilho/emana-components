@@ -1,0 +1,63 @@
+{
+	"name": "@alpfilho/emana-web-toolkit",
+	"version": "1.0.0",
+	"description": "Componentes comuns para projetos Emana",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	},
+	"main": "./dist/emana-web-toolkit.js",
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/alpfilho/emana-web-toolkit",
+	"author": {
+		"name": "Alfredo Peres",
+		"email": "alfredo@emana.digital"
+	},
+	"scripts": {
+		"build": "cross-env NODE_ENV=production webpack",
+		"build.types": "cross-env NODE_ENV=production tsc --emitDeclarationOnly --noEmit false",
+		"watch-build": "cross-env NODE_ENV=development webpack --watch"
+	},
+	"license": "MIT",
+	"files": [
+		"dist",
+		"LICENSE",
+		"README.md"
+	],
+	"private": false,
+	"devDependencies": {
+		"@babel/core": "^7.8.4",
+		"@babel/preset-env": "^7.8.4",
+		"@babel/preset-react": "^7.8.3",
+		"@babel/preset-typescript": "^7.8.3",
+		"@types/node": "^13.7.4",
+		"@types/react": "^16.9.20",
+		"@types/react-dom": "^16.9.5",
+		"@types/react-is": "^16.7.1",
+		"@types/styled-components": "^4.4.3",
+		"@types/webpack": "^4.41.6",
+		"babel-loader": "^8.0.6",
+		"babel-plugin-styled-components": "^1.10.7",
+		"clean-webpack-plugin": "^3.0.0",
+		"cross-env": "^7.0.0",
+		"prettier": "^1.19.1",
+		"source-map-loader": "^0.2.4",
+		"ts-node": "^8.6.2",
+		"typescript": "^3.7.5",
+		"webpack": "^4.41.6",
+		"webpack-cli": "^3.3.11"
+	},
+	"peerDependencies": {
+		"framer-motion": "^1.8.4",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-is": "^16.12.0",
+		"styled-components": "^5.0.1"
+	},
+	"dependencies": {
+		"framer-motion": "^1.8.4",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-is": "^16.12.0",
+		"styled-components": "^5.0.1"
+	}
+}

@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        clean: 'false'
+
+    - name: Publicação
+      run:  |
+        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_PKG_TOKEN }}" > .npmrc
+        yarn publish --access restricted

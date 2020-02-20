@@ -1,0 +1,9 @@
+# IDE's
+/.vscode
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+
