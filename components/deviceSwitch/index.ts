@@ -1,1 +1,0 @@
-export { DeviceSwitch } from './deviceSwitch';

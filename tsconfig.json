@@ -1,14 +1,22 @@
 {
 	"compilerOptions": {
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
+		"outDir": "dist",
+		"module": "CommonJS",
+		"target": "ESNext",
+		"sourceMap": true,
+		"strict": true,
+		"allowJs": false,
+		"rootDir": "src",
 		"jsx": "react",
 		"moduleResolution": "node",
+		"declaration": true,
+		"declarationMap": true,
+		"skipLibCheck": true,
 		"esModuleInterop": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noImplicitAny": true,
-		"module": "esnext",
-		"resolveJsonModule": true
-	}
+		"resolveJsonModule": true,
+		"noEmit": true,
+		"pretty": true
+	},
+	"include": ["src"],
+	"exclude": ["./node_modules/*", "./dist/"]
 }
