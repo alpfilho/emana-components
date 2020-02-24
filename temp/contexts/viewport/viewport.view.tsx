@@ -10,39 +10,10 @@ export const ViewportContextProvider: React.FC = ({ children }) => {
 	const viewportValuesRef = useRef<ViewportValues>(new ViewportValues());
 	const [device, setDevice] = useState<DeviceT>(undefined);
 
-	const updateDevice = () => {
-		const { width } = viewportValuesRef.current.get();
-		const deviceType = getDeviceType(width.get());
-
-		if (deviceType !== device) {
-			setDevice(deviceType);
-		}
-	};
-
 	useLayoutEffect(() => {
 		viewportValuesRef.current.updatePosition();
 		viewportValuesRef.current.updateSize();
 		updateDevice();
-	}, []);
-
-	useEffect(() => {
-		const onViewportChange = () => {
-			viewportValuesRef.current.updatePosition();
-			viewportValuesRef.current.updateSize();
-			updateDevice();
-		};
-
-		/**
-		 * O Listener é registrado no componente e não na classe porquê assim
-		 * conseguimos remover o listener de forma eficiente (quando o contextProvider é desmontado)
-		 */
-		viewportElement.addEventListener('scroll', onViewportChange);
-		viewportElement.addEventListener('resize', onViewportChange);
-
-		return () => {
-			viewportElement.removeEventListener('scroll', onViewportChange);
-			viewportElement.removeEventListener('resize', onViewportChange);
-		};
 	}, []);
 
 	return (

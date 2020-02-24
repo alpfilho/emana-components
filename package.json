@@ -2,32 +2,34 @@
 	"name": "@alpfilho/emana-web-toolkit",
 	"version": "2.0.2",
 	"description": "Componentes comuns para projetos Emana",
-	"languageName": "node",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com",
-		"access": "restricted"
-	},
-	"main": "./dist/emana-web-toolkit.js",
-	"types": "./dist/index.d.ts",
 	"repository": "https://github.com/alpfilho/emana-web-toolkit",
+	"license": "MIT",
 	"author": {
 		"name": "Alfredo Peres",
 		"email": "alfredo@emana.digital"
 	},
-	"scripts": {
-		"build": "cross-env NODE_ENV=production webpack",
-		"build:types": "cross-env NODE_ENV=production tsc --emitDeclarationOnly --noEmit false",
-		"watch:build": "cross-env NODE_ENV=development webpack --watch",
-		"watch:build:types": "cross-env NODE_ENV=development tsc --emitDeclarationOnly --noEmit false --watch",
-		"watch:all": "concurrently -n watch-build,watch-types 'yarn run watch:build' 'yarn run watch:build:types'",
-		"build:all": "concurrently -n build,build-types 'yarn run build' 'yarn run build:types'"
-	},
-	"license": "MIT",
+	"main": "./dist/emana-web-toolkit.js",
+	"types": "./dist/index.d.ts",
 	"files": [
 		"dist",
 		"LICENSE",
 		"README.md"
 	],
+	"scripts": {
+		"build": "cross-env NODE_ENV=production webpack",
+		"build:all": "concurrently -n build,build-types 'yarn run build' 'yarn run build:types'",
+		"build:types": "cross-env NODE_ENV=production tsc --emitDeclarationOnly --noEmit false",
+		"watch:all": "concurrently -n watch-build,watch-types 'yarn run watch:build' 'yarn run watch:build:types'",
+		"watch:build": "cross-env NODE_ENV=development webpack --watch",
+		"watch:build:types": "cross-env NODE_ENV=development tsc --emitDeclarationOnly --noEmit false --watch"
+	},
+	"dependencies": {
+		"framer-motion": "^1.8.4",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-is": "^16.12.0",
+		"styled-components": "^5.0.1"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.8.4",
 		"@babel/preset-env": "^7.8.4",
@@ -39,10 +41,17 @@
 		"@types/react-is": "^16.7.1",
 		"@types/styled-components": "^5.0.0",
 		"@types/webpack": "^4.41.6",
+		"@typescript-eslint/eslint-plugin": "^2.21.0",
+		"@typescript-eslint/parser": "^2.21.0",
 		"babel-loader": "^8.0.6",
 		"babel-plugin-styled-components": "^1.10.7",
 		"concurrently": "^5.1.0",
 		"cross-env": "^7.0.0",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.18.3",
+		"eslint-plugin-react-hooks": "^2.4.0",
 		"prettier": "^1.19.1",
 		"source-map-loader": "^0.2.4",
 		"ts-node": "^8.6.2",
@@ -58,11 +67,9 @@
 		"react-is": "*",
 		"styled-components": "*"
 	},
-	"dependencies": {
-		"framer-motion": "^1.8.4",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-is": "^16.12.0",
-		"styled-components": "^5.0.1"
-	}
+	"publishConfig": {
+		"access": "restricted",
+		"registry": "https://npm.pkg.github.com"
+	},
+	"languageName": "node"
 }

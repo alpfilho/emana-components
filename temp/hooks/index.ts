@@ -8,13 +8,6 @@ import { HeaderContext } from '../contexts/header';
 import { ScrollControllerContext } from '../contexts/scrollController';
 
 /**
- * Hook para usar o context da viewport
- */
-export const useViewportValues = (): ViewportContextI => {
-	return useContext(ViewportContext);
-};
-
-/**
  * Hook para ler o tamanho do Header
  */
 export const useHeaderValues = () => {
