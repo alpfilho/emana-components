@@ -14,7 +14,10 @@ jobs:
         with:
           clean: 'false'
 
-      - name: Bundle Build
+      - name: Instala as dependências
+        run: yarn install
+
+      - name: Faz a build
         run: yarn build:all
 
       - name: Publicação
