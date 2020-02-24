@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import webpack from 'webpack';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 import pkg from './package.json';
 
@@ -17,6 +18,7 @@ const config: webpack.Configuration = {
 		libraryTarget: 'umd'
 	},
 	resolve: {
+		plugins: [new TsconfigPathsPlugin()],
 		extensions: ['.ts', '.tsx', '.js', '.jsx']
 	},
 	externals,

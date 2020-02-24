@@ -1,4 +1,4 @@
-type DeviceT = 'mobile' | 'tablet' | 'desktop';
+type DeviceT = 'mobile' | 'tablet' | 'desktop' | undefined;
 
 export const screenSizes = {
 	/**

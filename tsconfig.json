@@ -15,7 +15,14 @@
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
 		"noEmit": true,
-		"pretty": true
+		"pretty": true,
+		"baseUrl": "./",
+		"paths": {
+			"@components/*": ["src/components/*"],
+			"@contexts/*": ["src/contexts/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@utils/*": ["src/utils/*"]
+		}
 	},
 	"include": ["src"],
 	"exclude": ["./node_modules/*", "./dist/"]
