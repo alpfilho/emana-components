@@ -7,14 +7,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        clean: 'false'
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          clean: 'false'
 
-    - name: Publicação
-      run:  |
-        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_PKG_TOKEN }}" > .npmrc
-        yarn publish --access restricted
+      - name: Bundle Build
+        run: yarn build:all
+
+      - name: Publicação
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_PKG_TOKEN }}" > .npmrc
+          yarn publish --access restricted
