@@ -13,9 +13,8 @@ const config: webpack.Configuration = {
 	entry: resolve(__dirname, 'src/index.ts'),
 	output: {
 		path: resolve(__dirname, 'dist'),
-		filename: 'emana-web-toolkit.js',
-		library: 'emanaWebToolkit',
-		libraryTarget: 'umd'
+		filename: 'index.js',
+		libraryTarget: 'commonjs'
 	},
 	resolve: {
 		plugins: [new TsconfigPathsPlugin()],

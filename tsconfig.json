@@ -1,14 +1,14 @@
 {
 	"compilerOptions": {
-		"outDir": "dist",
 		"module": "CommonJS",
-		"target": "ESNext",
+		"target": "ES6",
 		"sourceMap": true,
 		"strict": true,
-		"allowJs": false,
+		"allowJs": true,
+		"outDir": "dist",
 		"rootDir": "src",
 		"jsx": "react",
-		"moduleResolution": "node",
+		"moduleResolution": "Node",
 		"declaration": true,
 		"declarationMap": true,
 		"skipLibCheck": true,
@@ -22,7 +22,8 @@
 			"@contexts/*": ["src/contexts/*"],
 			"@hooks/*": ["src/hooks/*"],
 			"@utils/*": ["src/utils/*"]
-		}
+		},
+		"plugins": [{ "transform": "@zerollup/ts-transform-paths" }]
 	},
 	"include": ["src"],
 	"exclude": ["./node_modules/*", "./dist/"]
