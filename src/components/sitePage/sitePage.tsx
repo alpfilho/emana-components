@@ -1,20 +1,29 @@
 import React from 'react';
 
+import { useHeaderValues } from '@hooks/useHeader';
 import { SitePageMain } from './sitePage.style';
 
 export interface SitePageI {
 	className?: string;
-	// avoidHeader?: boolean;
+	avoidHeader?: boolean;
 }
 
 export const SitePage: React.FC<SitePageI> = ({
 	className,
 	children,
-	// avoidHeader
+	avoidHeader
 }) => {
-	// const { paddingTop } = useAvoidHeader(paddingTopProp);
+	const { height: headerHeight } = useHeaderValues();
 
-	return <SitePageMain className={className}>{children}</SitePageMain>;
+	return (
+		<SitePageMain
+			className={className}
+			marginTop={avoidHeader ? headerHeight : undefined}
+			headerHeight={headerHeight}
+		>
+			{children}
+		</SitePageMain>
+	);
 };
 
 export default SitePage;
