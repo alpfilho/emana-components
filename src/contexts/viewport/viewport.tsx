@@ -1,9 +1,4 @@
-import React, {
-	createContext,
-	useCallback,
-	useLayoutEffect,
-	useReducer
-} from 'react';
+import React, { createContext, useCallback, useLayoutEffect, useReducer } from 'react';
 import { useMotionValue } from 'framer-motion';
 
 import {
@@ -26,9 +21,7 @@ const defaultContext: ViewportContextStateI = {
 /**
  * Viewport Context
  */
-export const ViewportContext = createContext<ViewportContextStateI>(
-	defaultContext
-);
+export const ViewportContext = createContext<ViewportContextStateI>(defaultContext);
 
 const viewportContextReducer = (
 	state: ViewportContextStateI,
@@ -41,7 +34,12 @@ const viewportContextReducer = (
 			});
 		}
 		case 'update_values': {
-			return Object.assign({}, state);
+			return Object.assign({}, state, {
+				top: action.top,
+				left: action.left,
+				height: action.height,
+				width: action.width
+			});
 		}
 		default: {
 			return state;
@@ -70,6 +68,16 @@ export const ViewportContextProvider: React.FC = ({ children }) => {
 		viewportLeft.set(getScrollX());
 	}, [viewportLeft, viewportTop]);
 
+	const updateValues = useCallback(() => {
+		dispatchViewportContextAction({
+			type: 'update_values',
+			height: viewportHeight,
+			width: viewportWidth,
+			top: viewportTop,
+			left: viewportLeft
+		});
+	}, [viewportTop, viewportHeight, viewportWidth, viewportLeft]);
+
 	const updateDevice = useCallback(() => {
 		const deviceType = getDeviceType(viewportWidth.get());
 
@@ -90,6 +98,7 @@ export const ViewportContextProvider: React.FC = ({ children }) => {
 	useLayoutEffect(() => {
 		/* Inicialização */
 		onViewportChange();
+		updateValues();
 		/**
 		 * O Listener é registrado no componente porquê assim conseguimos remover o
 		 * listener de forma eficiente (quando o contextProvider é desmontado)
@@ -101,11 +110,9 @@ export const ViewportContextProvider: React.FC = ({ children }) => {
 			window.removeEventListener('scroll', onViewportChange);
 			window.removeEventListener('resize', onViewportChange);
 		};
-	}, [onViewportChange]);
+	}, [onViewportChange, updateValues]);
 
 	return (
-		<ViewportContext.Provider value={viewportContextState}>
-			{children}
-		</ViewportContext.Provider>
+		<ViewportContext.Provider value={viewportContextState}>{children}</ViewportContext.Provider>
 	);
 };

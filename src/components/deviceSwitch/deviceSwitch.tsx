@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useViewport } from '@hooks/useViewport';
 
 export interface DeviceSwitchI {
@@ -7,11 +7,11 @@ export interface DeviceSwitchI {
 	desktop?: React.ReactElement;
 }
 
-export const DeviceSwitch: React.FC<DeviceSwitchI> = ({
+export const DeviceSwitch = memo<DeviceSwitchI>(function DeviceSwitch({
 	desktop,
 	smartphone,
 	tablet
-}) => {
+}) {
 	const { device } = useViewport();
 
 	if (device === 'smartphone') {
@@ -35,4 +35,4 @@ export const DeviceSwitch: React.FC<DeviceSwitchI> = ({
 	}
 
 	return null;
-};
+});

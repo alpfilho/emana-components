@@ -8,11 +8,15 @@ export interface SitePageI {
 	avoidHeader?: boolean;
 }
 
-export const SitePage: React.FC<SitePageI> = ({
-	className,
-	children,
-	avoidHeader
-}) => {
+/**
+ * Representa um main que é capaz de evitar o header com a prop `avoidHeader`
+ * @type {React.FC<SitePageI>}
+ * @param className {string}
+ * @param children {ReactElement}
+ * @param avoidHeader {boolean}
+ * @constructor
+ */
+export const SitePage: React.FC<SitePageI> = ({ className, children, avoidHeader }) => {
 	const { height: headerHeight } = useHeaderValues();
 
 	return (

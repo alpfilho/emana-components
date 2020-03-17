@@ -21,4 +21,10 @@ export interface ViewportContextStateI {
  */
 export type ViewportContextAction =
 	| { type: 'update_device'; device: DeviceType }
-	| { type: 'update_values' };
+	| {
+			type: 'update_values';
+			top?: MotionValue;
+			left?: MotionValue;
+			height?: MotionValue;
+			width?: MotionValue;
+	  };

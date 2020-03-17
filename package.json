@@ -20,13 +20,14 @@
 		"build:all": "concurrently -n build,build-types 'yarn run build' 'yarn run build:types'",
 		"build:types": "cross-env NODE_ENV=production ttsc --emitDeclarationOnly --noEmit false",
 		"dev": "rm -rf dist && yarn run watch:all",
+		"lint:js": "eslint src --ext .js,.jsx,.ts,.tsx",
 		"watch:all": "concurrently -n watch-build,watch-types 'yarn run watch:build' 'yarn run watch:build:types'",
 		"watch:build": "cross-env NODE_ENV=development webpack --watch",
 		"watch:build:types": "cross-env NODE_ENV=development ttsc --emitDeclarationOnly --noEmit false --watch"
 	},
 	"dependencies": {
-    "framer-motion": "^1.8.4",
-    "popmotion": "9.0.0-beta-8",
+		"framer-motion": "^1.8.4",
+		"popmotion": "9.0.0-beta-8",
 		"react": "^16.0.0",
 		"react-dom": "^16.0.0",
 		"react-is": "^16.0.0",
@@ -77,6 +78,5 @@
 	"publishConfig": {
 		"access": "restricted",
 		"registry": "https://npm.pkg.github.com"
-	},
-	"languageName": "node"
+	}
 }

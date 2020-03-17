@@ -1,4 +1,4 @@
-import React, { createContext, useState, useMemo, useEffect } from 'react';
+import React, { createContext, useState, useMemo } from 'react';
 
 import { HeaderContextI } from './header.types';
 
@@ -23,9 +23,5 @@ export const HeaderContextProvider: React.FC = ({ children }) => {
 		[headerHeight]
 	);
 
-	return (
-		<HeaderContext.Provider value={headerValue}>
-			{children}
-		</HeaderContext.Provider>
-	);
+	return <HeaderContext.Provider value={headerValue}>{children}</HeaderContext.Provider>;
 };

@@ -21,21 +21,9 @@ export interface SlideControlsI {
 }
 
 export type useSliderControlsType = (
-	/**
-	 * Tamanho do slide
-	 */
 	slideLength: number,
-	/**
-	 * Tempo de espera entre ações
-	 */
 	debounceTime?: number,
-	/**
-	 * Se true, o componente inicia o loop assim que é montado
-	 */
 	autoPlay?: boolean,
-	/**
-	 * Tempo em que cada slide ficará ativo
-	 */
 	loopInterval?: number
 ) => SlideControlsI;
 
@@ -103,7 +91,7 @@ export const useSliderControls: useSliderControlsType = (
 	const debouncedAction = useCallback((action: (param: any) => void, param?): void => {
 		const debounceControl = debounceControlRef.current;
 
-		if (debounceControl.isExecutingAnotherAction === false) {
+		if (!debounceControl.isExecutingAnotherAction) {
 			debounceControl.isExecutingAnotherAction = true;
 			clearTimeout(debounceControl.timerID);
 			action(param);

@@ -13,11 +13,10 @@ export const useHeaderValues = (): HeaderContextI => {
 };
 
 /**
- * Hook para usar no header que atualizará a altura
+ * Hook para registrar a altura do header
+ * @param headerContainer {MutableRefObject<HTMLElement>} Referência do container do header
  */
-export const useHeaderHeightUpdate = (
-	headerContainer: MutableRefObject<HTMLElement>
-): void => {
+export const useHeaderHeightUpdate = (headerContainer: MutableRefObject<HTMLElement>): void => {
 	const { height, setHeaderHeight } = useHeaderValues();
 
 	const onResize = useCallback(() => {

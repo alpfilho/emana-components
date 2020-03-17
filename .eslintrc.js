@@ -11,18 +11,20 @@ module.exports = {
 	plugins: ['jsx-a11y', 'react-hooks'],
 	extends: [
 		'eslint:recommended',
+		'plugin:jsx-a11y/recommended',
+		'plugin:react/recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
-		'plugin:jsx-a11y/recommended',
-		'plugin:react/recommended',
 		'prettier/@typescript-eslint'
 	],
 	rules: {
+		'no-console': 'error',
+		'no-mixed-spaces-and-tabs': 'off',
+		'@typescript-eslint/no-explicit-any': 'off',
 		'react/prop-types': 'off',
 		'react-hooks/rules-of-hooks': 'error',
-		'react-hooks/exhaustive-deps': 'error',
-		'@typescript-eslint/no-explicit-any': 'off'
+		'react-hooks/exhaustive-deps': 'error'
 	},
 	settings: {
 		react: {
