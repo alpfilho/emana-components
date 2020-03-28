@@ -1,5 +1,6 @@
 {
-	"presets": ["@babel/env", "@babel/typescript", "@babel/react"],
+	"presets": ["@babel/env", "@babel/react"],
+  "sourceMaps": "both",
 	"plugins": [
 		[
 			"babel-plugin-styled-components",
