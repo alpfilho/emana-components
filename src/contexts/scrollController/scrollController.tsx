@@ -1,8 +1,8 @@
-import React, { createContext, useRef, useMemo, useEffect, useCallback } from 'react';
+import React, { createContext, useCallback, useEffect, useMemo, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ScrollControllerContextI } from './scrollController.types';
 import { useViewport } from '@hooks/useViewport';
-import { spring, ColdSubscription } from 'popmotion';
+import { ColdSubscription, spring } from 'popmotion';
 
 /**
  * Default Context

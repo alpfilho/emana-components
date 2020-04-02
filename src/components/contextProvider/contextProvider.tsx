@@ -1,8 +1,7 @@
 import React from 'react';
-
-import { ViewportContextProvider } from '@contexts/viewport';
+// import { ViewportContextProvider } from '@contexts/viewport';
 import { HeaderContextProvider } from '@contexts/header';
-import { ScrollControllerProvider } from '@contexts/scrollController';
+// import { ScrollControllerProvider } from '@contexts/scrollController';
 
 /**
  * Componente responável por implementar todos os contextos padrão
@@ -11,11 +10,11 @@ import { ScrollControllerProvider } from '@contexts/scrollController';
  * @constructor
  */
 export const ContextProvider: React.FC = ({ children }) => {
-	return (
-		<ViewportContextProvider>
-			<ScrollControllerProvider>
-				<HeaderContextProvider>{children}</HeaderContextProvider>
-			</ScrollControllerProvider>
-		</ViewportContextProvider>
-	);
+  return (
+    // <ViewportContextProvider>
+    // <ScrollControllerProvider>
+    <HeaderContextProvider>{children}</HeaderContextProvider>
+    // </ScrollControllerProvider>
+    // </ViewportContextProvider>
+  );
 };

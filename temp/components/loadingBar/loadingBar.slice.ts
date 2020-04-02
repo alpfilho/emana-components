@@ -6,7 +6,7 @@ const initialState: LoadingBarState = {
 };
 
 export const loadingBarSlice = createSlice({
-	name: 'loadingBar',
+	name: 'topLoadingBar',
 	initialState,
 	reducers: {
 		enableLoadingBar: (state: LoadingBarState): void => {

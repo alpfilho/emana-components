@@ -9,17 +9,17 @@ export const Container = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
 `;
 
 /**
  * Sempre mantem uma margem em relacão ás bordas da tela
- * o padrão é 96px em cada lado e 32px no mobile
+ * o padrão é 92px em cada lado e 32px no mobile
  * Expande até o máximo de uma tela fullhd (1920px)
  */
 export const Content = styled.div`
 	position: relative;
-	width: calc(100% - (96px * 2));
+	width: calc(100% - (92px * 2));
 	max-width: ${screenSizes.fullhd}px;
 
 	${mediaQuery.screen.maxWidth(screenSizes.md)} {

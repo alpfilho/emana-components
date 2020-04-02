@@ -1,8 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from 'rollup-plugin-typescript2';
-import ttypescript from 'ttypescript';
-import babel from 'rollup-plugin-babel';
+import ts from '@wessberg/rollup-plugin-ts';
 import del from 'rollup-plugin-delete';
 
 import pkg from './package.json';
@@ -18,11 +16,10 @@ export default [
 			del({ targets: 'dist/*' }),
 			resolve({ extensions }),
 			commonjs(),
-			typescript({
-				/* Typescript com suporte a transforms */
-				typescript: ttypescript
-			}),
-			babel({ extensions, include: ['src/**/*'] })
+			ts({
+				transpiler: 'babel',
+				exclude: ['node_modules/**/*.*']
+			})
 		],
 		output: { file: pkg.module, format: 'esm', name: pkg.name, sourcemap: true },
 		watch: {
