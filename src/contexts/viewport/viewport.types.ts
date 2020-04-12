@@ -3,26 +3,17 @@
  */
 export type DeviceType = 'smartphone' | 'tablet' | 'desktop';
 
+export type ViewportT = {
+	x?: number | string;
+	y?: number | string;
+	height?: number | string;
+	width?: number | string;
+};
+
 /**
  * Viewport State
  */
 export interface ViewportContextStateI {
-	top?: number;
-	left?: number;
-	height?: number;
-	width?: number;
+	viewport?: ViewportT;
 	device: DeviceType;
 }
-
-/**
- * Viewport Actions
- */
-export type ViewportContextAction =
-	| { type: 'update_device'; device: DeviceType }
-	| {
-			type: 'update_values';
-			top?: number;
-			left?: number;
-			height?: number;
-			width?: number;
-	  };

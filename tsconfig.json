@@ -10,7 +10,6 @@
 		"jsx": "react",
 		"moduleResolution": "Node",
 		"declaration": true,
-		"composite": true,
 		"declarationMap": true,
 		"skipLibCheck": true,
 		"esModuleInterop": true,
@@ -25,6 +24,6 @@
 		},
 		"plugins": [{ "transform": "@zerollup/ts-transform-paths" }]
 	},
-	"include": ["src"],
+	"include": ["src/**/*"],
 	"exclude": ["node_modules/**/*.*", "dist"]
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { useHeaderValues } from '@hooks/useHeader';
 import { SitePageMain } from './sitePage.style';
 
 export interface SitePageI {
@@ -9,25 +8,12 @@ export interface SitePageI {
 }
 
 /**
- * Representa um main que é capaz de evitar o header com a prop `avoidHeader`
+ * Representa um main
  * @type {React.FC<SitePageI>}
  * @param className {string}
  * @param children {ReactElement}
- * @param avoidHeader {boolean}
  * @constructor
  */
-export const SitePage: React.FC<SitePageI> = ({ className, children, avoidHeader }) => {
-	const { height: headerHeight } = useHeaderValues();
-
-	return (
-		<SitePageMain
-			className={className}
-			marginTop={avoidHeader ? headerHeight : undefined}
-			headerHeight={headerHeight}
-		>
-			{children}
-		</SitePageMain>
-	);
+export const SitePage: React.FC<SitePageI> = ({ className, children }) => {
+	return <SitePageMain className={className}>{children}</SitePageMain>;
 };
-
-export default SitePage;

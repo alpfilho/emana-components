@@ -1,8 +1,26 @@
 import React from 'react';
-import { Link as RouterLink, LinkProps } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
-export type LinkI = Omit<LinkProps, 'component'>;
+export interface LinkI {
+	to: string;
+	className?: string;
+}
 
-export const Link: React.FC<LinkI> = ({ to, children }) => {
-	return <RouterLink to={to}>{children}</RouterLink>;
+/**
+ * Link comum
+ */
+export const Link: React.FC<LinkI> = ({ to, className, children }) => {
+	if (to.startsWith('http')) {
+		return (
+			<a href={to} className={className} target="_blank" rel="noreferrer noopener">
+				{children}
+			</a>
+		);
+	}
+
+	return (
+		<HashLink to={to} className={className}>
+			{children}
+		</HashLink>
+	);
 };

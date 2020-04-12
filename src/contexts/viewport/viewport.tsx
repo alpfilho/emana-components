@@ -1,5 +1,5 @@
-import React, { createContext, useCallback, useLayoutEffect, useReducer } from 'react';
-import { useMotionValue } from 'framer-motion';
+import React, { createContext, useCallback, useEffect, useMemo, useState } from 'react';
+import { useSpring } from 'react-spring';
 
 import {
 	getViewportWidth,
@@ -9,13 +9,19 @@ import {
 	getScrollX
 } from '@utils/viewport.utils';
 
-import { ViewportContextStateI, ViewportContextAction } from './viewport.types';
+import { ViewportContextStateI, DeviceType, ViewportT } from './viewport.types';
 
 /**
  * Default Context
  */
 const defaultContext: ViewportContextStateI = {
-	device: 'desktop'
+	device: 'desktop',
+	viewport: {
+		x: 0,
+		y: 0,
+		width: 0,
+		height: 0
+	}
 };
 
 /**
@@ -23,96 +29,56 @@ const defaultContext: ViewportContextStateI = {
  */
 export const ViewportContext = createContext<ViewportContextStateI>(defaultContext);
 
-const viewportContextReducer = (
-	state: ViewportContextStateI,
-	action: ViewportContextAction
-): ViewportContextStateI => {
-	switch (action.type) {
-		case 'update_device': {
-			return Object.assign({}, state, {
-				device: action.device
-			});
-		}
-		case 'update_values': {
-			return Object.assign({}, state, {
-				top: action.top,
-				left: action.left,
-				height: action.height,
-				width: action.width
-			});
-		}
-		default: {
-			return state;
-		}
-	}
-};
-
 export const ViewportContextProvider: React.FC = ({ children }) => {
-	const viewportHeight = useMotionValue(0);
-	const viewportWidth = useMotionValue(0);
-	const viewportTop = useMotionValue(0);
-	const viewportLeft = useMotionValue(0);
+	const [viewport, setViewport] = useSpring<ViewportT>(() => ({ x: 0, y: 0, width: 0, height: 0 }));
+	const [device, setDevice] = useState<DeviceType>('desktop');
 
-	const [viewportContextState, dispatchViewportContextAction] = useReducer(
-		viewportContextReducer,
-		defaultContext
+	const contextState = useMemo(
+		() => ({
+			viewport,
+			device
+		}),
+		[viewport, device]
 	);
 
-	const updateSize = useCallback(() => {
-		viewportWidth.set(getViewportWidth());
-		viewportHeight.set(getViewportHeight());
-	}, [viewportHeight, viewportWidth]);
-
-	const updatePosition = useCallback(() => {
-		viewportTop.set(getScrollY());
-		viewportLeft.set(getScrollX());
-	}, [viewportLeft, viewportTop]);
-
-	const updateValues = useCallback(() => {
-		dispatchViewportContextAction({
-			type: 'update_values',
-			height: viewportHeight,
-			width: viewportWidth,
-			top: viewportTop,
-			left: viewportLeft
-		});
-	}, [viewportTop, viewportHeight, viewportWidth, viewportLeft]);
-
 	const updateDevice = useCallback(() => {
-		const deviceType = getDeviceType(viewportWidth.get());
+		const deviceType = getDeviceType((viewport.width?.getValue() as number) || 0);
 
-		if (deviceType !== viewportContextState.device) {
-			dispatchViewportContextAction({
-				type: 'update_device',
-				device: deviceType
-			});
+		if (deviceType !== device) {
+			setDevice(deviceType);
 		}
-	}, [viewportContextState.device, viewportWidth]);
+	}, [device, viewport.width]);
+
+	const updateViewport = useCallback(() => {
+		setViewport({
+			x: getScrollX(),
+			y: getScrollY(),
+			height: getViewportHeight(),
+			width: getViewportWidth(),
+			immediate: true
+		});
+		updateDevice();
+	}, [setViewport, updateDevice]);
 
 	const onViewportChange = useCallback(() => {
-		updatePosition();
-		updateSize();
-		updateDevice();
-	}, [updatePosition, updateSize, updateDevice]);
+		updateViewport();
+	}, [updateViewport]);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		/* Inicialização */
 		onViewportChange();
-		updateValues();
 		/**
 		 * O Listener é registrado no componente porquê assim conseguimos remover o
 		 * listener de forma eficiente (quando o contextProvider é desmontado)
 		 */
-		window.addEventListener('scroll', onViewportChange);
+		window.addEventListener('scroll', onViewportChange, { passive: true });
 		window.addEventListener('resize', onViewportChange);
 
 		return (): void => {
 			window.removeEventListener('scroll', onViewportChange);
 			window.removeEventListener('resize', onViewportChange);
 		};
-	}, [onViewportChange, updateValues]);
+	}, [onViewportChange]);
 
-	return (
-		<ViewportContext.Provider value={viewportContextState}>{children}</ViewportContext.Provider>
-	);
+	return <ViewportContext.Provider value={contextState}>{children}</ViewportContext.Provider>;
 };

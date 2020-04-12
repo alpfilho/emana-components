@@ -4,8 +4,6 @@ import { Container, Content } from './contentContainer.style';
 
 /**
  * Componente responsável por manter seus elementos internos dentro de um limite
- * @param children
- * @constructor
  */
 export const ContentContainer: React.FC = ({ children }) => {
 	return (

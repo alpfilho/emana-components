@@ -7,6 +7,9 @@ export interface DeviceSwitchI {
 	desktop?: React.ReactElement;
 }
 
+/**
+ * Componente que altera sua exibição conforme a tela
+ */
 export const DeviceSwitch = memo<DeviceSwitchI>(function DeviceSwitch({
 	desktop,
 	smartphone,
