@@ -1,6 +1,6 @@
 {
 	"name": "@alpfilho/emana-web-toolkit",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"description": "Componentes comuns para projetos Emana",
 	"repository": "https://github.com/alpfilho/emana-web-toolkit",
 	"license": "MIT",
@@ -67,14 +67,14 @@
 		"typescript": "^3.8.3"
 	},
 	"peerDependencies": {
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-is": "^16.13.0",
-    "react-router-dom": "^5.1.2",
-    "react-router-hash-link": "^1.2.2",
-    "react-spring": "^8.0.27",
-    "react-use-gesture": "^7.0.12",
-    "styled-components": "^5.1.0"
+		"react": "^16.13.0",
+		"react-dom": "^16.13.0",
+		"react-is": "^16.13.0",
+		"react-router-dom": "^5.1.2",
+		"react-router-hash-link": "^1.2.2",
+		"react-spring": "^8.0.27",
+		"react-use-gesture": "^7.0.12",
+		"styled-components": "^5.1.0"
 	},
 	"publishConfig": {
 		"access": "restricted",
