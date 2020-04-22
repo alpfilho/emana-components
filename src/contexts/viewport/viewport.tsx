@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { createContext, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSpring } from 'react-spring';
 
 import {
@@ -15,13 +15,15 @@ import { ViewportContextStateI, DeviceType, ViewportT } from './viewport.types';
  * Default Context
  */
 const defaultContext: ViewportContextStateI = {
-	device: 'desktop',
 	viewport: {
 		x: 0,
 		y: 0,
 		width: 0,
 		height: 0
-	}
+	},
+	// eslint-disable-next-line @typescript-eslint/no-empty-function
+	scrollTo: () => {},
+	device: 'desktop'
 };
 
 /**
@@ -30,15 +32,49 @@ const defaultContext: ViewportContextStateI = {
 export const ViewportContext = createContext<ViewportContextStateI>(defaultContext);
 
 export const ViewportContextProvider: React.FC = ({ children }) => {
-	const [viewport, setViewport] = useSpring<ViewportT>(() => ({ x: 0, y: 0, width: 0, height: 0 }));
+	const scrollControlRef = useRef({
+		animate: false
+	});
+
+	const [viewport, setViewport] = useSpring<ViewportT>(() => ({
+		x: 0,
+		y: 0,
+		width: 0,
+		height: 0,
+		onFrame: ({ y }: { y: number }): void => {
+			if (scrollControlRef.current.animate) {
+				window.scrollTo(0, y);
+			}
+		}
+	}));
+
 	const [device, setDevice] = useState<DeviceType>('desktop');
+
+	const scrollTo = useCallback(
+		({ y, x, animated = true }) => {
+			const scrollControl = scrollControlRef.current;
+			setViewport({
+				y,
+				x,
+				immediate: !animated,
+				onStart: () => {
+					scrollControl.animate = true;
+				},
+				onRest: () => {
+					scrollControl.animate = false;
+				}
+			});
+		},
+		[setViewport, scrollControlRef]
+	);
 
 	const contextState = useMemo(
 		() => ({
 			viewport,
+			scrollTo,
 			device
 		}),
-		[viewport, device]
+		[viewport, scrollTo, device]
 	);
 
 	const updateDevice = useCallback(() => {

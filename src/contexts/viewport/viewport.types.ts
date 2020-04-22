@@ -15,5 +15,6 @@ export type ViewportT = {
  */
 export interface ViewportContextStateI {
 	viewport?: ViewportT;
+	scrollTo: (options: { y?: number; x?: number; animated?: number }) => void;
 	device: DeviceType;
 }
