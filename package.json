@@ -1,8 +1,8 @@
 {
-	"name": "@alpfilho/emana-web-toolkit",
-	"version": "3.0.3",
+	"name": "@emana-digital/emana-web-toolkit",
+	"version": "3.0.4",
 	"description": "Componentes comuns para projetos Emana",
-	"repository": "https://github.com/alpfilho/emana-web-toolkit",
+	"repository": "https://github.com/emana-digital/emana-web-toolkit",
 	"license": "MIT",
 	"author": {
 		"name": "Alfredo Peres",
