@@ -63,15 +63,14 @@ export const ElementsRectContextProvider: React.FC = ({ children }) => {
 /**
  * Hook que guarda e atualiza o rect de elementos globalmente.
  * @param elementKey
- * @param elementRef
  */
 export const useElementRect = (elementKey: string): ElementI => {
 	const { elements } = useContext(elementsRectContext);
 	const element = elements[elementKey];
 	return useMemo(
 		() => ({
-			width: element.width || 0,
-			height: element.height || 0
+			width: element?.width || 0,
+			height: element?.height || 0
 		}),
 		[element]
 	);

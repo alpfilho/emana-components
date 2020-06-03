@@ -1,2 +1,2 @@
 export { LoadingFallback } from './loadingFallback';
-export { TopLoadingBar } from './topLoadingBar';
+export { TopLoadingBar, TopLoadingBarProvider } from './topLoadingBar';

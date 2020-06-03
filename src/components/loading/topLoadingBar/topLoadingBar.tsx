@@ -1,50 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useSpring } from 'react-spring';
 
-import { LoadingBarContainer, Anchor, Background, Highlight } from './topLoadingBar.styles';
+import { LoadingContext } from '@contexts/loadingContext';
+
+import { LoadingBarContainer, Anchor, Background } from './topLoadingBar.styles';
 
 export interface TopLoadingBarI {
 	color: string;
 }
 
-type StateT = 'hidden' | 'loading';
-
 export const TopLoadingBar: React.FC<TopLoadingBarI> = ({ color }) => {
-  const [state, setState] = useState<StateT>('hidden');
+	const { isLoading } = useContext(LoadingContext);
 
-	const [containerSpring, setContainerSpring] = useSpring(() => ({
-		transform: 'translate3d(-4px, 0, 0)'
-	}));
-
-	const [bakgroundSpring, setBackgroundSpring] = useSpring(() => ({
-		width: '100%'
-  }));
-
-  useEffect(() => {
-		if (state === 'hidden') {
-
-		}
-  }, [state])
-
-	const highlightSpring = useSpring({
-		to: async (next: any) => {
-			// eslint-disable-next-line no-constant-condition
-			while (1) {
-				await next({ transform: 'translate3d(116vw, 0, 0)' });
+	const [containerSpring, animateContainer] = useSpring(
+		{
+			y: '-100%',
+			config: {
+				tension: 600,
+				friction: 80
 			}
 		},
-		from: { transform: 'translate3d(-16vw, 0, 0)' },
-		delay: 750,
-		config: { duration: 2750 },
-		reset: true
-  });
+		[]
+	);
 
-  return (
+	const [backgroundSpring, animateBackground] = useSpring(
+		{
+			width: '0%',
+			config: {
+				duration: 2750,
+				ease: 'linear'
+			}
+		},
+		[]
+	);
+
+	useEffect(() => {
+		if (isLoading === true) {
+			animateContainer({ y: '0%' });
+			animateBackground({
+				to: { width: '75%' },
+				from: { width: '0%' }
+			});
+		} else {
+			animateContainer({ y: '-100%' });
+			animateBackground({ width: '100%' });
+		}
+	}, [animateContainer, animateBackground, isLoading]);
+
+	return (
 		<LoadingBarContainer style={containerSpring}>
 			<Anchor>
-				<Background style={bakgroundSpring} color={color}>
-					<Highlight style={highlightSpring} />
-				</Background>
+				<Background style={backgroundSpring} color={color} />
 			</Anchor>
 		</LoadingBarContainer>
 	);

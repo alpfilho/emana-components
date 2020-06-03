@@ -1,13 +1,14 @@
+import { SpringValue } from 'react-spring';
+
 /**
  * Device Types
  */
 export type DeviceType = 'smartphone' | 'tablet' | 'desktop';
 
 export type ViewportT = {
-	x?: number | string;
-	y?: number | string;
-	height?: number | string;
-	width?: number | string;
+	y: SpringValue<number>;
+	height: SpringValue<number>;
+	width: SpringValue<number>;
 };
 
 /**
@@ -15,6 +16,6 @@ export type ViewportT = {
  */
 export interface ViewportContextStateI {
 	viewport?: ViewportT;
-	scrollTo: (options: { y?: number; x?: number; animated?: number }) => void;
+	scrollTo: (options: { y?: number; animated?: number }) => void;
 	device: DeviceType;
 }
