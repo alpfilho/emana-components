@@ -13,8 +13,8 @@ const config: webpack.Configuration = {
 	entry: resolve(__dirname, 'src/index.ts'),
 	output: {
 		path: resolve(__dirname, 'dist'),
-		filename: 'emana-web-toolkit.js',
-		library: 'emanaWebToolkit',
+		filename: 'web-toolkit-frontend.js',
+		library: 'webToolkitFrontEnd',
 		libraryTarget: 'umd'
 	},
 	resolve: {

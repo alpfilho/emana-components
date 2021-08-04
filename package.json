@@ -1,13 +1,13 @@
 {
-	"name": "@alpfilho/emana-web-toolkit",
+	"name": "@emana-digital/web-toolkit-frontend",
 	"version": "1.0.0",
 	"description": "Componentes comuns para projetos Emana",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
-	"main": "./dist/emana-web-toolkit.js",
-  "types": "./dist/index.d.ts",
-  "repository": "https://github.com/alpfilho/emana-web-toolkit",
+	"main": "./dist/web-toolkit-frontend.js",
+	"types": "./dist/index.d.ts",
+	"repository": "https://github.com/emana-digital/web-toolkit-frontend",
 	"author": {
 		"name": "Alfredo Peres",
 		"email": "alfredo@emana.digital"
@@ -23,41 +23,38 @@
 		"LICENSE",
 		"README.md"
 	],
-	"private": false,
 	"devDependencies": {
-		"@babel/core": "^7.8.4",
-		"@babel/preset-env": "^7.8.4",
-		"@babel/preset-react": "^7.8.3",
-		"@babel/preset-typescript": "^7.8.3",
-		"@types/node": "^13.7.4",
-		"@types/react": "^16.9.20",
-		"@types/react-dom": "^16.9.5",
-		"@types/react-is": "^16.7.1",
-		"@types/styled-components": "^4.4.3",
-		"@types/webpack": "^4.41.6",
-		"babel-loader": "^8.0.6",
-		"babel-plugin-styled-components": "^1.10.7",
-		"clean-webpack-plugin": "^3.0.0",
-		"cross-env": "^7.0.0",
-		"prettier": "^1.19.1",
-		"source-map-loader": "^0.2.4",
-		"ts-node": "^8.6.2",
-		"typescript": "^3.7.5",
-		"webpack": "^4.41.6",
-		"webpack-cli": "^3.3.11"
+		"@babel/core": "^7.14.8",
+		"@babel/preset-env": "^7.14.9",
+		"@babel/preset-react": "^7.14.5",
+		"@babel/preset-typescript": "^7.14.5",
+		"@types/node": "^16.4.10",
+		"@types/react": "^17.0.15",
+		"@types/react-dom": "^17.0.9",
+		"@types/react-is": "^17.0.2",
+		"@types/styled-components": "^5.1.11",
+		"@types/webpack": "^5.28.0",
+		"babel-loader": "^8.2.2",
+		"babel-plugin-styled-components": "^1.13.2",
+		"clean-webpack-plugin": "4.0.0-alpha.0",
+		"cross-env": "^7.0.3",
+		"prettier": "^2.3.2",
+		"source-map-loader": "^3.0.0",
+		"ts-node": "^10.1.0",
+		"typescript": "^4.3.5",
+		"webpack": "^5.48.0",
+		"webpack-cli": "^4.7.2"
 	},
 	"peerDependencies": {
-		"framer-motion": "^1.8.4",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-is": "^16.12.0",
-		"styled-components": "^5.0.1"
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-is": "^17.0.2",
+		"styled-components": "^5.3.0"
 	},
 	"dependencies": {
-		"framer-motion": "^1.8.4",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-is": "^16.12.0",
-		"styled-components": "^5.0.1"
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-is": "^17.0.2",
+		"styled-components": "^5.3.0"
 	}
 }
