@@ -1,0 +1,14 @@
+import React from 'react';
+
+import { Container, Content } from './contentContainer.style';
+
+/**
+ * Componente responsável por manter seus elementos internos dentro de um limite
+ */
+export const ContentContainer: React.FC = ({ children }) => {
+	return (
+		<Container>
+			<Content>{children}</Content>
+		</Container>
+	);
+};

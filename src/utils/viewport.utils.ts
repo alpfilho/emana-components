@@ -1,4 +1,4 @@
-type DeviceT = 'mobile' | 'tablet' | 'desktop';
+import { DeviceType } from '@contexts/viewport/viewport.types';
 
 export const screenSizes = {
 	/**
@@ -27,9 +27,9 @@ export const screenSizes = {
 	fullhd: 1920
 };
 
-export const getDeviceType = (viewportWidth: number): DeviceT => {
+export const getDeviceType = (viewportWidth: number): DeviceType => {
 	if (viewportWidth <= screenSizes.tablet) {
-		return 'mobile';
+		return 'smartphone';
 	} else if (viewportWidth <= screenSizes.sm) {
 		return 'tablet';
 	}
@@ -37,9 +37,21 @@ export const getDeviceType = (viewportWidth: number): DeviceT => {
 };
 
 export const getViewportWidth = (): number => {
-	return window.innerWidth;
+	return window.innerWidth || 0;
 };
 
 export const getViewportHeight = (): number => {
-	return window.innerHeight;
+	return window.innerHeight || 0;
+};
+
+export const getScrollY = (): number => {
+	return window.pageYOffset || 0;
+};
+
+export const getScrollX = (): number => {
+	return window.pageXOffset || 0;
+};
+
+export const getElementScrollOffset = (element: HTMLElement): number => {
+	return element.getBoundingClientRect().top + getScrollY();
 };

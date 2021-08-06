@@ -7,14 +7,20 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, devhouse]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        clean: 'false'
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          clean: 'false'
 
-    - name: Publicação
-      run:  |
-        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_PKG_TOKEN }}" > .npmrc
-        yarn publish --access public
+      - name: Instala as dependências
+        run: yarn install
+
+      - name: Faz a build
+        run: yarn build
+
+      - name: Publicação
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
+          yarn publish --access restricted
